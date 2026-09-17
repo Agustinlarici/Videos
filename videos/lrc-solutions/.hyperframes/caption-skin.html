@@ -1,5 +1,5 @@
 <!--
-  Blue Professional — caption skin (preset-local source).
+  Coral — caption skin (preset-local source).
 
   This is the preset's own lower-third karaoke caption look. product-launch-video's
   Step 2 copies it into the project as caption-skin.html; captions.mjs then fills the
@@ -10,8 +10,8 @@
     · the empty data-brand-tokens style → :root tokens derived from the project's frame.md
 
   Token contract — reference ONLY this fixed vocab (captions.mjs injects it from
-  frame.md, so the Step-2 brand overlay flows through; each var has a blue-professional
-  literal fallback for standalone preview):
+  frame.md, so the Step-2 brand overlay flows through; each var has a coral literal
+  fallback for standalone preview):
     --cap-ink · --cap-canvas · --cap-accent · --cap-accent-2 · --font-display ·
     --font-body · --cap-band-top · --cap-band-height
   Hooks (do not rename): .caption-group / .caption-word + states .is-active / .is-spoken,
@@ -19,12 +19,13 @@
   State changes use gsap.set({className}) (applied on the engine's frame-by-frame seek);
   never tl.call() callbacks (seek does not fire them → wrong state on render).
 
-  Visual: a soft cobalt-tinted card on warm cream — a 4% cobalt fill inside a 1.5px
-  20%-cobalt border, soft 14px rounded corners, NO shadow (the system's premium signal
-  is the absence of cast depth; the tinted card does the lift). Space Grotesk, sentence
-  case, near-black glyphs. Upcoming words sit in muted gray; the current word becomes a
-  solid cobalt chip — the brand's signature single-accent gesture, a pill-rounded fill
-  with cream reading on top; spoken words settle to near-black ink, chip cleared.
+  Visual: a flat warm-cream block on a single ink hairline border — coral's hard-edge
+  geometry, square corners, ZERO radius, ZERO shadow (coral's depth is hard color edges,
+  never cast). Bebas Neue, uppercase + tracked, ink glyphs. Upcoming words sit in faint
+  ink; the current word gets a solid coral-fire flat block (the brand's signature
+  hard-edge fill — a square block, no blur, no radius) with ink reading on top; spoken
+  words settle to solid ink, fill cleared. Brand/key terms carry a coral hairline
+  underline (the counter inflection).
 -->
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
 
@@ -65,64 +66,66 @@
     opacity: 0;
   }
 
-  /* THE tinted card — 4% cobalt fill, 1.5px 20%-cobalt border, soft 14px corners,
-     NO shadow (the tinted card does the lift; cast depth is forbidden) */
+  /* THE flat cream block — single ink hairline border, square corners (coral's hard-edge
+     geometry), ZERO radius, ZERO shadow */
   .caption-pill {
     max-width: 78%;
-    padding: 20px 44px 24px;
-    background: color-mix(in srgb, var(--cap-accent, #1e2bfa) 4%, var(--cap-canvas, #fdfae7));
-    border: 1.5px solid color-mix(in srgb, var(--cap-accent, #1e2bfa) 20%, transparent);
-    border-radius: 14px;
+    padding: 18px 44px 20px;
+    background: var(--cap-canvas, #f5f0e8);
+    border: 1px solid var(--cap-ink, #1a1a1a);
+    border-radius: 0;
   }
   .caption-line {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 0.1em 0.34em;
-    font-family: var(--font-display, "Space Grotesk"), system-ui, sans-serif;
-    font-weight: 600;
-    font-size: clamp(40px, 4.4vw, 58px);
-    line-height: 1.16;
-    letter-spacing: -0.02em;
+    gap: 0.1em 0.3em;
+    font-family: var(--font-display, "Bebas Neue"), sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: clamp(44px, 4.8vw, 64px);
+    line-height: 1.04;
+    letter-spacing: 0.06em;
   }
 
-  /* upcoming — muted gray, no chip */
+  /* upcoming — faint ink, no fill */
   .caption-word {
     display: inline-block;
-    padding: 0 0.18em;
-    border-radius: 0.32em;
-    color: color-mix(in srgb, var(--cap-ink, #111111) 52%, var(--cap-canvas, #fdfae7));
+    padding: 0 0.12em;
+    color: color-mix(in srgb, var(--cap-ink, #1a1a1a) 40%, var(--cap-canvas, #f5f0e8));
   }
-  /* current word — THE solid cobalt chip (the single-accent gesture; pill-rounded
-     fill, NO shadow), cream reading on top */
+  /* current word — THE coral-fire flat block (box-shadow spread = a hard square block
+     w/o layout shift; no blur, no radius), ink reading on top */
   .caption-word.is-active {
-    color: var(--cap-canvas, #fdfae7);
-    background: var(--cap-accent, #1e2bfa);
-    box-shadow: none;
+    color: var(--cap-ink, #1a1a1a);
+    background: var(--cap-accent, #e85d5d);
+    box-shadow: 0 0 0 0.1em var(--cap-accent, #e85d5d);
   }
-  /* already spoken — solid near-black ink, chip cleared */
+  /* already spoken — solid ink, fill cleared */
   .caption-word.is-spoken {
-    color: var(--cap-ink, #111111);
+    color: var(--cap-ink, #1a1a1a);
     background: transparent;
     box-shadow: none;
   }
 
   /* optional per-word accents (dormant until a word-classer tags them) */
-  /* brand / key term — cobalt, the system's one accent on a key word */
+  /* brand / key term — a coral hairline underline (coral's only display inflection) */
   .caption-word.cap-brand {
-    color: var(--cap-accent, #1e2bfa);
+    text-decoration: underline;
+    text-decoration-thickness: 0.06em;
+    text-decoration-color: var(--cap-accent, #e85d5d);
+    text-underline-offset: 0.12em;
   }
-  /* numerals / data — cobalt 700, the figure voice */
+  /* numerals / data — Inter body voice, slightly recessed */
   .caption-word.cap-num {
-    font-family: var(--font-display, "Space Grotesk"), system-ui, sans-serif;
-    font-weight: 700;
-    color: var(--cap-accent, #1e2bfa);
+    font-family: var(--font-body, "Inter"), ui-sans-serif, sans-serif;
+    color: color-mix(in srgb, var(--cap-ink, #1a1a1a) 72%, var(--cap-canvas, #f5f0e8));
   }
-  /* emphasis — a directional-red hairline underline (inline only, never a fill) */
+  /* emphasis — a coral-dark hairline underline (the counter accent) */
   .caption-word.cap-cta {
     text-decoration: underline;
     text-decoration-thickness: 2px;
-    text-decoration-color: var(--cap-accent-2, #dc2626);
+    text-decoration-color: var(--cap-accent-2, #d44a4a);
     text-underline-offset: 0.1em;
   }
 
@@ -131,7 +134,7 @@
       max-width: 92%;
     }
     .caption-line {
-      font-size: clamp(34px, 5.4vw, 48px);
+      font-size: clamp(38px, 5.8vw, 54px);
     }
   }
 </style>
@@ -203,7 +206,7 @@
         var at = Math.max(start, Number(w.start));
         tl.set(el, { className: "caption-word" }, start); // upcoming (also resets on reverse-seek)
         tl.set(el, { className: "caption-word is-active" }, at); // current
-        tl.fromTo(el, { scale: 0.985 }, { scale: 1, duration: 0.18, ease: "power1.out" }, at);
+        tl.fromTo(el, { scale: 0.97 }, { scale: 1, duration: 0.14, ease: "power2.out" }, at);
         if (i + 1 < words.length) {
           var nextAt = Math.max(start, Number(words[i + 1].start));
           tl.set(el, { className: "caption-word is-spoken" }, nextAt); // demote when next activates

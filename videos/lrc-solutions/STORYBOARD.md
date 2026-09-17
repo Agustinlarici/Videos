@@ -1,89 +1,113 @@
 ---
 format: 1920x1080
 duration: 15s
-message: "LRC turns messy manual process and factory data into one clear, automated decision"
-arc: BAB (compressed) — before (raw texture) → resolve/bridge (product surfaces) → brand (tagline lockup)
+message: "LRC IT Solutions is BI, automation and AI, custom-built for manufacturing, restaurants and reception"
+arc: Company overview (compressed) — chi siamo → cosa facciamo → per chi → sign-off
 audience: manufacturing, restaurant, and service-business operators (Italian-speaking)
 mode: autonomous
 music: none
+style_preset: coral
 ---
 
 ## Video direction
 
-- **Palette system** (from `frame.md`, never invented): white/cream canvas, near-black `text` for every headline, a single saturated cobalt `#2563EB` (`primary`) as the ONLY accent — underlines, glows, the tinted-card fill, the wordmark pop. No second accent color anywhere.
-- **Motion grammar + reveal model**: long-tail `power3` decel on every entrance (no bounce/overshoot). This piece is **silent** (no VO), so reveals are paced to **on-screen text cues** instead of spoken ones — the same anti-PowerPoint law applies: nothing dumps at t=0, each line/photo/wordmark lands on its own beat, spread across the back half of its frame. During any hold, at most a subtle jitter (`sine-wave-loop`, low amplitude) keeps it alive — no lazy breathing, no back-half pan/push.
-- **Rhythm / held-frame allocation**: Frames 1–2 are the active reveal (texture → resolve); Frame 3 is the deliberate held/breather frame — per `logo-assemble-lockup`'s own doctrine, its final beat holds dead-static once the lockup completes.
-- **Negative list**: no stock "AI" bokeh/gradients, no invented stats or percentages (the declined "+24%" stays out entirely — frame.md's hard numerals rule applies with extra force here), no bouncy/elastic easing, no infinite/looping motion, no camera pan or push in any back half, no captions track (silent piece, nothing to caption).
+- **Palette system** (from `frame.md`, never invented): the Coral preset's three-surface system, remixed onto the brand — `{colors.coral}` = brand blue `#2563EB` (both accent AND full environment regions), `{colors.cream-dark}` = the light "celeste" tint `#C3D4F9` the user asked for, `{colors.black}` = near-black `#0F1117`, `{colors.cream}` = white. Headlines: ink on cream/blue, cream on ink — never gray, never white-on-blue (card-icon squares are the one sanctioned white-on-blue chrome per frame.md's own component spec).
+- **Motion grammar + reveal model**: REVISION v2 — the first cut held too still and read as corporate/slow. This cut is deliberately **denser and faster**: long-tail `power3` still governs individual entrances (no bounce), but reveals are hard-cut and staggered at a quicker tempo than the first pass, with more elements in motion per frame (kinetic-type escalation, staggered card-assemble, a drawing accent-line) rather than one slow resolve per frame. Silent piece (no VO) — reveals pace to on-screen text cues, spread across each frame rather than dumped at t=0.
+- **Rhythm / held-frame allocation**: no frame gets a long static hold this time (that was the v1 complaint). Frame 4 still lands a brief, legible settle at the very end (≤1.2s) so the sign-off can be read — that is the video's only deliberate pause, and even it ends on a small live flourish (the accent-line draw), not dead stillness.
+- **Negative list**: NO stock/captured photography anywhere (v1's factory + dashboard photos are fully removed) — every visual is typography + the Coral preset's own geometric vocabulary (solid color regions, hard edges, 45° hatch, wallpaper numerals). No invented stats/percentages (frame.md's hard numerals rule). No gradients except the preset's own rare sanctioned 135° blue feature wash. No rounded rectangles (0-radius per Coral doctrine, circles only). No bouncy/elastic easing, no infinite/looping motion, no lazy breathing.
+- **Transitions**: hard, mechanical handoffs to match Coral's "boundary IS the layout" doctrine — `squeeze` and `push-slide` between frames instead of soft crossfades, adding movement at the macro (between-frame) level too.
 
-## Frame 1 — Il rumore
+## Frame 1 — Chi siamo
 
-- scene: Real industrial-automation photo, texture-close, with the site's own problem language fragmenting across it
-- duration: 5s
+- scene: Region-Split Cover — a blue top band cycles the three service words fast, then the cream field resolves on the company name
+- duration: 3s
 - transition_in: cut
-- status: animated
-- src: compositions/frames/01-il-rumore.html
+- status: outline
+- src: compositions/frames/01-chi-siamo.html
 - type: hook
-- persuasion: Pain validation
-- beat: overwhelm
-- asset_candidates: assets/automazione-in-ambiente-industriale-mode.jpg — real photo, automation in an industrial environment
+- persuasion: Category announcement
+- beat: curiosity
+- blueprint: kinetic-type-beats (Adapt — Product_Intro: product-intro-kinetic-type-namedrop)
+- focal: (typography only — no image asset)
+- roles: (none)
 - voiceover:
-- blueprint: kinetic-type-beats (Adapt — Problem: problem-kinetic-type-beats)
-- focal: assets/automazione-in-ambiente-industriale-mode.jpg
-- roles: automazione-in-ambiente-industriale-mode.jpg = background (full-bleed, dimmed ~35% under a cobalt-tinted overlay)
 
-narrativeRole: Opens on unresolved texture, not a company description — a purely visual hook (no VO) that reads as tension before any claim is made.
-keyMessage: Manual process and disconnected factory data are the starting condition.
+narrativeRole: Opens on what the company IS, in its own three words, before anything else — answers "chi siamo" in the first beat instead of a slow visual metaphor.
+keyMessage: LRC IT Solutions = Business Intelligence + Automazione + Intelligenza Artificiale.
 
-Adapt: keep the signature move — a short pain line lands alone, no product visible yet, then the next line replaces it — but the canvas is the real photo instead of a flat color field.
+Adapt: keep the signature move (hard-cut through value beats, resolve on the brand name) but staged across the Coral preset's own Region-Split Cover layout (blue band + cream field) instead of a flat single-color field.
 
-Scene 1 (0.0–2.2s): the industrial-automation photo is present from t=0, full-bleed, static, dimmed ~35% under a cobalt-tinted overlay for legibility (Layout: full-width strip, background layer). "Dati fermi." lands centered in the lower-middle third — clear of the bottom caption-band keep-out — via a per-word staggered reveal on a smooth `power3` settle; a thin cobalt underline draws left→right beneath "fermi."
-Scene 2 (2.2–5.0s): "Dati fermi." clears (quick fade) as "Processi manuali." hard-cut flash-replaces it in the same position — the swap itself is the beat. The photo stays completely static underneath (no pan/push); holds to the frame's exit (the harness `transition_in` on Frame 2).
+Scene 1 (0.0–1.8s): Region-Split ground is present from t=0 — 38% blue top band (45° hatch, `section-label` eyebrow "LRC IT SOLUTIONS" ink, tiny, top-left) over a 62% cream field. In the blue band, three `section-headline`-scale words hard-cut flash in sequence, ink text, ~0.55s each, no fade/slide: "BUSINESS INTELLIGENCE." → "AUTOMAZIONE." → "INTELLIGENZA ARTIFICIALE." — the swap itself is the beat (kinetic-type-beats signature).
+Scene 2 (1.8–3.0s): the cream field resolves — a `hero-title` "LRC IT SOLUTIONS" flash-cuts in dead-center, ink, uppercase, tracked (no per-word buildup — a single hard arrival, per the namedrop pattern's "resolve on the brand name"), with a thin blue `accent-line` drawing in beneath it left→right. Holds to the frame's exit (harness `transition_in` on Frame 2).
 
-## Frame 2 — La lettura
+## Frame 2 — Cosa facciamo
 
-- scene: The industrial texture resolves into the real BI dashboard photo; the site's own solution line lands as it settles
-- duration: 5s
-- transition_in: zoom-through
-- status: animated
-- src: compositions/frames/02-la-lettura.html
+- scene: Feature Stat — full blue environment, the site's own mission line reveals phrase by phrase over a wallpaper numeral "01"
+- duration: 3.5s
+- transition_in: squeeze
+- status: outline
+- src: compositions/frames/02-cosa-facciamo.html
 - type: product_intro
-- persuasion: Negative contrast
-- beat: relief + control
-- asset_candidates: assets/dashboard-di-business-intelligence-con-g.jpg — real photo, business intelligence dashboard
-- voiceover:
+- persuasion: Value stacking
+- beat: clarity
 - blueprint: compose
-- focal: assets/dashboard-di-business-intelligence-con-g.jpg
-- roles: automazione-in-ambiente-industriale-mode.jpg = supporting (outgoing, first ~1s only, same framing as Frame 1's hold); dashboard-di-business-intelligence-con-g.jpg = cutout (incoming, resolves to full-bleed focal)
-
-narrativeRole: The value claim lands here, by beat two, per the reverse-iceberg rule — the same visual world resolves from raw texture into a legible product surface.
-keyMessage: "Trasforma i dati in decisioni" — data becomes a decision, not a stat.
-
-Compose (no blueprint fits a two-still silent morph cleanly): still pace the reveal across the shot, never front-load.
-
-Scene 1 (0.0–1.0s): continues Frame 1's held photo one beat longer — full-bleed, static, still dimmed, no text — before anything moves.
-Scene 2 (1.0–3.2s): a `card-morph-anchor` handoff — the photo's apparent surface morphs (a scale + corner-radius shift toward frame.md's 14px card radius) directly into the dashboard photo revealed beneath it; a soft cobalt `ambient-glow-bloom` marks the seam. One continuous transformation, never a hard cut.
-Scene 3 (3.2–5.0s): the dashboard photo settles full-bleed as the focal image (~55% density, Layout: full-width strip). "Trasforma i dati in decisioni" — the site's own solution line — reveals via a per-word staggered fade inside a card-tinted band in the lower-middle third — clear of the bottom caption-band keep-out (frame.md's `card-tinted`, 4% cobalt fill). Holds still once landed; at most subtle jitter, no back-half push.
-
-## Frame 3 — La priorità
-
-- scene: The dashboard photo dissolves into the brand tagline card, closing on the wordmark
-- duration: 5s
-- transition_in: crossfade
-- status: animated
-- src: compositions/frames/03-la-priorita.html
-- type: branding
-- persuasion: Identity resolution — the brand's own headline claim (not a stat) is the payoff the whole video resolves to
-- beat: confidence
+- focal: (typography only — no image asset)
+- roles: (none)
 - voiceover:
-- blueprint: logo-assemble-lockup (Adapt — Brand_Outro: brand-outro-assemble-logo-lockup)
-- focal: (typography only — no image asset; pure lockup beat)
-- roles: (none — dashboard photo from Frame 2 clears at Scene 1, no asset carried into this frame)
 
-narrativeRole: The closing brand hold — deliberately swaps the "+24%" stat the user declined for the site's own headline claim as the resolve target.
-keyMessage: "Il tuo processo. La nostra priorità." over the wordmark "LRC IT Solutions" — no stat, no CTA; a calm, confident close for a muted website-embed placement.
+narrativeRole: Answers "cosa facciamo" with the site's own words, not an invented tagline — the value claim lands here, by beat two, per the reverse-iceberg rule.
+keyMessage: "Trasformiamo dati di fabbrica e processi ripetitivi in decisioni concrete" (the site's own mission line, verbatim).
 
-Adapt: keep the signature move (the stage clears, then the lockup builds into being) but there is no icon/mark asset to stroke-draw — only a wordmark — so the tagline text itself is the material that assembles, and the wordmark completes the lockup beneath it.
+Compose (frame.md's own Feature Stat treatment already defines the shot; no roles-based blueprint needed): full-bleed blue ground with the 45° hatch and a faint `background-numeral` "01" (12% ink) seated behind the headline as wallpaper.
 
-Scene 1 (0.0–1.2s): Frame 2's dashboard photo clears the stage — shrinks + fades toward center (the exit half of a `scale-swap-transition`) onto frame.md's empty cream canvas, per the Brand_Outro "stage clears" beat.
-Scene 2 (1.2–3.2s): on the cleared canvas, "Il tuo processo." lands first (near-black `h1`, centered, `Closing/CTA` treatment) via a per-word staggered reveal; "La nostra priorità." reveals beneath it a beat later in cobalt (`blockquote`/`h2` ramp) — the tagline is the raw material the lockup assembles from.
-Scene 3 (3.2–5.0s): the wordmark "LRC IT Solutions" settles beneath the tagline via a whole-word spring-pop entrance (`spring-pop-entrance`, smooth `power3`, no overshoot), completing the lockup. Holds dead-static for this final beat — the video's one deliberate long hold; at most subtle jitter (`sine-wave-loop`, low amplitude).
+Scene 1 (0.0–0.5s): blue ground + hatch + wallpaper numeral "01" present from t=0, still, nothing else on screen yet (Layout: Feature Stat, centered-left focal, ~40% of the blue field left empty per frame.md's silence rule).
+Scene 2 (0.5–2.6s): an ink `section-label` eyebrow "COSA FACCIAMO" cuts in top-left (0.5s), then the mission line reveals in three staggered phrase-chunks via per-word staggered reveal (`dynamic-content-sequencing`), each phrase landing on its own beat rather than one dump: "Trasformiamo dati di fabbrica" (0.7s) / "e processi ripetitivi" (1.35s) / "in decisioni concrete." (2.0s) — set at `section-headline` scale, ink, left-anchored, stacked lines.
+Scene 3 (2.6–3.5s): the completed 3-line headline holds still and reads — no push, no breathe; the wallpaper numeral is the only thing with any residual life (a single low-amplitude `sine-wave-loop` jitter, finite, not a loop).
+
+## Frame 3 — Per chi
+
+- scene: Three-Column Catalog — the three real service verticals assemble as cards, fast stagger
+- duration: 4.5s
+- transition_in: push-slide LEFT
+- status: outline
+- src: compositions/frames/03-per-chi.html
+- type: feature_showcase
+- persuasion: Rule of three
+- beat: confidence
+- blueprint: grid-card-assemble (Adapt — Key_Feature: key-feature-card-grid-assemble)
+- focal: (typography/geometry only — no image asset)
+- roles: (none)
+- voiceover:
+
+narrativeRole: Answers "per chi lavoriamo" with the site's own three named verticals — this is the video's dense exception (Coral's Three-Column Catalog treatment), the one frame allowed to run busy.
+keyMessage: One technology, three real sectors — Agenzia IA, Manifatturiero, Business & Ristorazione.
+
+Adapt (Key_Feature grid variant): keep the signature move — labeled tiles cascade one-by-one into a 3-up grid, near-static hold with a slow push-in — cast with this brand's real three verticals instead of generic feature pills.
+
+Scene 1 (0.0–0.6s): cream ground, `section-headline` "NON RIPARTIAMO MAI DA ZERO" (the site's own real line) cuts in centered-top, ink, uppercase. Three empty card slots are NOT pre-drawn — they arrive with their content (avoids the "empty grid" front-load).
+Scene 2 (0.6–3.2s): the three `card`s (5px blue top border, 48px blue `card-icon` square, no shadow/radius) stagger-assemble left→right into the grid, ~0.5s gap between arrivals, each a short fade+slide into its slot (no scatter, no bounce): **Card 1** (0.6s) — icon: a simple ink chat-bubble glyph; `card-title` "AGENZIA IA"; body "Assistenti che rispondono, prenotano e qualificano da soli." **Card 2** (1.1s) — icon: a checkmark-in-gear glyph; `card-title` "MANIFATTURIERO"; body "Controllo qualità che non dimentica nulla." **Card 3** (1.6s) — icon: a fork-and-plate glyph; `card-title` "BUSINESS & RISTORAZIONE"; body "Il tuo locale, digitalizzato in un unico pannello." Each card's body copy staggers in via per-word reveal immediately after its card lands, finishing by 3.2s.
+Scene 3 (3.2–4.5s): the completed 3-card grid holds near-static with one slow, faint camera push-in (≤3% scale over the window) — the only camera move in the whole video, per `grid-card-assemble`'s own doctrine; no other motion competes with it.
+
+## Frame 4 — Chiudiamo
+
+- scene: Closing Plate — the tagline assembles fast, the wordmark lands, a contact line completes the sign-off
+- duration: 4s
+- transition_in: zoom-through
+- status: outline
+- src: compositions/frames/04-chiudiamo.html
+- type: branding
+- persuasion: Identity resolution — the brand's own tagline (not a stat) is the payoff
+- beat: confidence
+- blueprint: logo-assemble-lockup (Adapt — Brand_Outro: settled-lockup-reveal, sped up)
+- focal: (typography only — no image asset)
+- roles: (none)
+- voiceover:
+
+narrativeRole: The closing brand hold — still no "+24%" stat — but now lands with a fast, kinetic assemble instead of v1's long static hold, per the "more movement" note.
+keyMessage: "Il tuo processo. La nostra priorità." — wordmark "LRC IT SOLUTIONS" — a real contact line, not a generic CTA button.
+
+Adapt: keep the signature move (a lockup completes on screen) but sped up and busier than v1 — this is the fast, kinetic version the user asked for, not the slow one-beat reveal from the first cut.
+
+Scene 1 (0.0–1.6s): cream field; "Il tuo processo." hard-cuts in centered (`section-headline`, ink) at t=0.1s; "La nostra priorità." hard-cuts in beneath it in blue at t=0.6s — two fast arrivals, not a slow per-word build (more movement, fewer, punchier beats).
+Scene 2 (1.6–2.6s): a blue `accent-line` draws left→right beneath the tagline (1.6–2.0s); the bottom `info-bar` band (blue, `bar-title` left + `section-label` right) slides up into place (2.0–2.6s) carrying the wordmark "LRC IT SOLUTIONS" (left) and the real contact line "info@lrc-solutions.com" (right, from the site's own footer).
+Scene 3 (2.6–4.0s): everything settles — this is the video's one legible hold (per Video Direction, ≤1.2s of real stillness), but it is not dead: a final low-amplitude jitter plus a last accent flourish (the accent-line's leading edge glows briefly) keeps it visibly alive up to the real end of the video.

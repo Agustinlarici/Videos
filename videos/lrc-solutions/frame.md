@@ -1,120 +1,115 @@
 ---
 version: alpha
-name: Blue Professional — Frame (video / frame layer)
+name: Coral — Frame (video / frame layer)
 description: >
-  Video-first companion to Blue Professional's design.md. The unit is the frame (1920×1080). Atoms
-  are identical and sacred — the warm cream canvas, a single saturated cobalt (#1e2bfa) as the only
-  accent, the three-step gray text ladder, Inter (display/numerals/chrome) + Inter (body),
-  soft cobalt-tinted cards (4% fill / 20% border / 10–14px radius) with NO shadows, pill chrome, and
-  the cobalt progress bar. Composition + frame scale rewritten. Motion out of scope.
+  Video-first companion to Coral's design.md. The unit is the frame (1920×1080), not the
+  slide-in-a-deck. Atoms are identical and sacred — the three-surface system (coral fire /
+  ink black / warm cream), Inter uppercase tracked + Inter body, the 45° diagonal hatch,
+  decorative wallpaper numerals, hard color-region splits, zero shadow, zero radius (save
+  circles). Composition, frame scale, and aspect-ratio behavior are rewritten for the frame.
+  Motion is out of scope.
 unit: the frame — 1920×1080 primary; 9:16 and 1:1 documented
 principle: atoms are sacred · composition is free · numbers come from the script
 
 colors:
-  bg: "#FFFFFF"
-  primary: "#2563EB"
-  text: "#0F1117"
-  text-muted: "#2762EB"
-  text-light: "#9A9A9A"
-  accent-light: "rgba(37, 99, 235, 0.08)"
-  accent-medium: "rgba(37, 99, 235, 0.15)"
-  border: "rgba(37, 99, 235, 0.2)"
-  card-bg: "rgba(37, 99, 235, 0.04)"
-  positive: "#059669"
-  negative: "#dc2626"
-
-radii:
-  pill: "100px"
-  card-lg: "14px"
-  card-md: "12px"
-  card-sm: "10px"
-  bar: "6px"
-  circle: "50%"
+  coral: "#2563EB"
+  coral-dark: "#2762EB"
+  cream: "#FFFFFF"
+  cream-dark: "#C3D4F9"
+  black: "#0F1117"
+  gray: "#6B6B6B"
+  light-gray: "#B0B0B0"
+  white: "#FFFFFF"
 
 typography:
-  # — reading ramp (Inter body + Inter chrome) —
-  body:    { fontFamily: "Inter", cqw: 0.85, weight: 400, lineHeight: 1.6, color: "text-muted" }
-  h4-eyebrow:{ fontFamily: "Inter", cqw: 0.8, weight: 600, tracking: "0.08em", upper: true, color: "primary" }
-  tag:     { fontFamily: "Inter", px: 12, weight: 500, color: "primary" }
-  counter: { fontFamily: "Inter", px: 13, weight: 500, tracking: "0.05em", color: "text-muted" }
-  # — display / numerical ramp (Inter, near-black headings / cobalt numerals) —
-  h3:      { fontFamily: "Inter", cqw: 1.25, weight: 500, lineHeight: 1.3, tracking: "-0.02em", color: "text" }
-  stat-num:{ fontFamily: "Inter", cqw: 1.9, weight: 700, lineHeight: 1.0, color: "primary" }
-  blockquote:{ fontFamily: "Inter", cqw: 2.4, weight: 500, lineHeight: 1.35, color: "text" }
-  h2:      { fontFamily: "Inter", cqw: 2.6, weight: 600, lineHeight: 1.1, tracking: "-0.02em", color: "text" }
-  metric-value:{ fontFamily: "Inter", cqw: 3.0, weight: 700, lineHeight: 1.0, color: "primary" }
-  h1:      { fontFamily: "Inter", cqw: 4.2, weight: 700, lineHeight: 1.08, tracking: "-0.02em", color: "text" }
-  quote-mark:{ fontFamily: "Inter", cqw: 8.0, weight: 700, lineHeight: 0.5, color: "primary", opacity: 0.15 }
+  # — reading ramp (Inter) —
+  body:          { fontFamily: "Inter", cqw: 1.0,  weight: 400, lineHeight: 1.7 }
+  body-light:    { fontFamily: "Inter", cqw: 1.5,  weight: 400, lineHeight: 1.5, note: "pull-quote voice" }
+  section-label: { fontFamily: "Inter", px: 12, weight: 700, tracking: "4px", upper: true }
+  item-label:    { fontFamily: "Inter", px: 11, weight: 700, tracking: "3px", upper: true }
+  quote-attribution: { fontFamily: "Inter", px: 14, weight: 600, tracking: "3px", upper: true }
+  quote-role:    { fontFamily: "Inter", px: 12, weight: 400, tracking: "1px" }
+  # — display / hero ramp (Inter, uppercase, tracked) —
+  card-title:    { fontFamily: "Inter", cqw: 1.9, weight: 400, lineHeight: 1.1, tracking: "1px", upper: true }
+  sidebar-value: { fontFamily: "Inter", cqw: 2.3, weight: 400, lineHeight: 1.0, upper: true }
+  bar-title:     { fontFamily: "Inter", cqw: 2.3, weight: 400, lineHeight: 1.0, tracking: "2px", upper: true }
+  card-stat:     { fontFamily: "Inter", cqw: 2.5, weight: 400, lineHeight: 1.0, upper: true }
+  column-title:  { fontFamily: "Inter", cqw: 3.7, weight: 400, lineHeight: 1.0, tracking: "2px", upper: true }
+  section-headline:{ fontFamily: "Inter", cqw: 4.2, weight: 400, lineHeight: 1.0, tracking: "2px", upper: true }
+  stat-numeral:  { fontFamily: "Inter", cqw: 5.0, weight: 400, lineHeight: 1.0, upper: true }
+  hero-title:    { fontFamily: "Inter", cqw: 6.5, weight: 400, lineHeight: 0.9, tracking: "4px", upper: true }
+  jumbo-feature: { fontFamily: "Inter", cqw: 9.0, weight: 400, lineHeight: 1.0, tracking: "12px", upper: true }
+  # — decorative —
+  background-numeral: { fontFamily: "Inter", cqw: 10.0, weight: 400, color: "rgba(0,0,0,0.12)", note: "wallpaper numeral inside a coral region" }
+  giant-mark:    { fontFamily: "Inter", cqw: 14.0, weight: 400, color: "rgba(0,0,0,0.35)", note: "decorative quote mark inside a coral region" }
 
 spacing:
-  pad-x: "5cqw"
-  pad-y-top: "5cqw"
-  gap-cards: "1.4cqw"
-  accent-line: "60px × 4px"
+  pad-x: "5cqw"       # standard horizontal frame padding
+  pad-y: "4cqw"
+  pad-col: "3cqw"
+  gap-grid: "1.7cqw"
+  card-pad: "2cqw"
 
 components:
-  card-tinted:
-    backgroundColor: "{colors.card-bg}"
-    border: "1.5px solid {colors.border}"
-    rounded: "{radii.card-lg}"
+  diagonal-hatch:
+    backgroundImage: "repeating-linear-gradient(45deg, transparent 0 20px, rgba(0,0,0,.06) 20px 40px)"
+    placement: "::before overlay on {colors.coral} regions"
+    description: "Signature 45° hatch (6% ink). Variants −45° 30/60px, 90° vertical 60/62px 10% ink. Texture, never depth."
+  region-split:
+    layout: "two/three solid surfaces meeting at a hard edge; ratios 38/62 rows, 40/60 cols, 50/50"
+    rounded: "0"
+    description: "The primary layout device — no gradient, no rounded junction; the boundary is the layout."
+  card:
+    backgroundColor: "{colors.white}"
+    borderTop: "0.26cqw solid {colors.coral}"
+    rounded: "0"
     shadow: "none"
-    description: "Universal content card. Never solid-colored, never opaque-bordered, NO shadow."
-  metric-card:
-    backgroundColor: "{colors.card-bg}"
-    border: "1.5px solid {colors.border}"
-    rounded: "{radii.card-lg}"
-    typography: "{typography.metric-value} ({colors.primary}) + {typography.metric-label} + {typography.metric-desc}"
-    description: "+ optional inline ↑/↓ change chip ({colors.positive}/{colors.negative} text, no fill)."
-  tag-pill:
-    backgroundColor: "{colors.accent-light}"
-    textColor: "{colors.primary}"
-    rounded: "{radii.pill}"
-    typography: "{typography.tag}"
-    description: "Top-right of the slide-header."
-  cta-button:
-    backgroundColor: "{colors.primary}"
-    textColor: "{colors.bg}"
-    rounded: "{radii.pill}"
-    typography: "Inter 600"
-    shadow: "soft cobalt on hover only — the system's only shadow"
-    description: "The one solid element."
+    typography: "{typography.card-title} + {typography.body}"
+    description: "5px coral TOP border is the only chrome; holds a card-icon, title, body, coral card-stat."
+  sidebar-item:
+    backgroundColor: "{colors.white}"
+    borderLeft: "0.2cqw solid {colors.coral}"
+    rounded: "0"
+    typography: "{typography.sidebar-value} + {typography.section-label}"
+    description: "4px coral LEFT border is the only chrome."
+  card-icon:
+    backgroundColor: "{colors.coral}"
+    textColor: "{colors.white}"
+    size: "2.5cqw square"
+    rounded: "0"
+    description: "The card mark — one white Bebas glyph centered."
   accent-line:
-    backgroundColor: "{colors.primary}"
-    size: "60×4, 2px radius"
-    description: "Above cover titles / eyebrow separators."
-  bar-track:
-    backgroundColor: "{colors.accent-light}"
-    fill: "{colors.primary} (display:block so width resolves)"
-    rounded: "{radii.bar}"
-    description: "28px track; fill carries the value."
-  step-circle:
-    backgroundColor: "{colors.primary}"
-    textColor: "{colors.bg}"
-    rounded: "50%"
-    size: "56px"
-    description: "Sequential steps fade opacity 1.0→0.85→0.7→0.55."
-  split-highlight:
-    backgroundColor: "{colors.accent-light}"
-    borderLeft: "4px solid {colors.primary}"
-    rounded: "{radii.card-md}"
-    description: "Inline pull-quote callout."
-  slide-header:
-    typography: "{typography.h4-eyebrow} (cobalt) left, tag-pill right; {typography.h2} below"
-    description: "Top band of every content frame."
-  atmosphere:
-    elements: "clipped diagonal cobalt-tint panel, 3×3 cobalt dot grid, concentric closing rings"
-    description: "Cover/closing only. Never on content frames."
-  progress-bar:
-    backgroundColor: "{colors.primary}"
-    size: "3px tall, bottom edge, width grows with index"
-    description: "Persistent progress strip."
+    backgroundColor: "{colors.coral}"
+    size: "4cqw × 0.25cqw (60×4 closing variant)"
+    rounded: "0"
+    description: "Sub-headline accent rule."
+  background-numeral:
+    typography: "{typography.background-numeral}"
+    color: "rgba(0,0,0,0.12)"
+    placement: "behind a {colors.coral} region's title"
+    description: "The wallpaper-numeral signature (12% ink)."
+  giant-mark:
+    typography: "{typography.giant-mark}"
+    color: "rgba(0,0,0,0.35)"
+    placement: "inside a {colors.coral} region"
+    description: "Oversized quote mark / character, half-decorative."
+  timeline:
+    line: "0.2cqw solid {colors.black} (gradient-dashed ::after)"
+    node: "{colors.coral} circle, {colors.cream} halo, 50% radius"
+    description: "Ink line with coral nodes + cream halos."
+  info-bar:
+    backgroundColor: "{colors.cream-dark}"
+    typography: "{typography.bar-title} + uppercase {typography.section-label}"
+    rounded: "0"
+    shadow: "none"
+    description: "Footer band beneath a feature region — Bebas title left, Inter meta right."
 ---
 
-# Blue Professional — Frame (video / frame layer)
+# Coral — Frame (video / frame layer)
 
 ## Brand adaptation (READ FIRST — the frontmatter is the source of truth)
 
-This is the **blue-professional** preset remixed onto the captured brand. The YAML frontmatter above (colors · typography · components) is **normative and already correct — use it verbatim.** The prose below is the ORIGINAL preset's intent; read it THROUGH the frontmatter:
+This is the **coral** preset remixed onto the captured brand. The YAML frontmatter above (colors · typography · components) is **normative and already correct — use it verbatim.** The prose below is the ORIGINAL preset's intent; read it THROUGH the frontmatter:
 
 - **Fonts** — already set to **Inter** (display) / **Inter** (body); ignore any preset font name lingering in prose.
 - **Weights** — the brand font ships `{400, 500, 600, 700}` only; every weight is clamped to these — ignore higher preset weights (e.g. 600/700) in prose.
@@ -123,197 +118,209 @@ This is the **blue-professional** preset remixed onto the captured brand. The YA
 
 ## Overview
 
-Blue Professional at frame scale is a **consulting-grade system: restraint with one strong
-commitment.** A warm cream canvas and a single saturated cobalt that carries every accent —
-eyebrow, metric, CTA, chart fill, progress bar. No secondary brand color, no pastels, just cream,
-cobalt, and a tight ladder of grays. The register is investment-research / McKinsey briefing:
-measured, data-dense without crowding, executive-readable at distance.
+Coral at frame scale is a **bold magazine poster** built from three solid surfaces — coral fire,
+ink black, warm cream — that meet at **hard color edges.** The region boundary IS the layout: a
+frame splits into a coral plane + a cream plane, or a coral panel + an ink panel, each holding a
+self-contained composition. No gradient transitions, no rounded junctions, no drop shadows.
 
-The voice is two faces in fixed roles: **Inter** (display, every numeral, all chrome —
-eyebrows uppercase 0.08em) and **Inter** (body, muted gray, line 1.6). Headlines are near-black;
-cobalt is reserved for accent moments. Depth is **soft and tinted** — 4% cobalt card fills with 20%
-cobalt borders and 10–14px radii — never shadowed. The lack of harsh shadows is the premium signal.
+The voice is a two-face hierarchy: **Inter** — tall condensed caps, always uppercase, always
+tracked (1–12px) — carries every headline, stat, title, and meta figure; **Inter** carries every
+body line, label, and attribution across weights 300–700. Bebas declares; Inter explains. The
+signature atmospherics are the **45° diagonal hatch** (6% ink) over coral regions and the
+**oversized wallpaper numeral** (12% ink) behind a region's title.
 
 **Key characteristics at frame scale:**
 
-- **Warm cream ground** on every frame; **single cobalt** as the only accent.
-- **Inter** (display/numerals/chrome) + **Inter** (body) — near-black headlines, cobalt numerals.
-- **Tinted cards** — cobalt 4% fill, cobalt 20% 1.5px border, 10–14px radius, **no shadow**.
-- **Pill chrome** (100px) — tag pills + the one solid cobalt CTA; cobalt **progress bar**.
-- **Soft rounded corners everywhere** (no square corners save the progress bar).
-- **Atmosphere** (diagonal panel, dot grid, concentric rings) on cover/closing only.
-
-## The Frame
+- **Three surfaces, hard edges** — `{colors.coral}` / `{colors.black}` / `{colors.cream}` as solid regions.
+- **Bebas uppercase + tracking** on every display element; **Inter** on every body/label.
+- **45° hatch** (6% ink) on coral regions; **wallpaper numerals** (12%) and **giant marks** (35%) behind content.
+- **Ink-on-fire** — Bebas on coral is always ink, never white. Eyebrows coral on cream/ink, ink on coral.
+- **Flat** — no shadow, no elevation; radius only on circles (nav dots, timeline nodes).
+- **Coral as accent AND environment** — 4–5px coral borders, 48px coral icon squares, and full coral regions.
 
 ### Frame Craft Bar
 
 Three eyeball tests gate every frame before any structural check:
 
-- **Squint** — one **near-black headline or cobalt numeral** dominates at 3–6× its neighbor.
-- **Silence** — content frames read **balanced, not crowded**; the **dashboard is the one dense exception**.
-- **Restraint** — a **single cobalt accent** carries everything; headlines stay near-black (never cobalt); no shadows (tinted cards do the lift); positive/negative inline-text only.
-- **Reference** — aim at an **investment-research / McKinsey quarterly briefing**; failure looks like a **heavy-outlined, multi-color dashboard**.
+- **Squint** — one element dominates at **3–6× its nearest neighbor**: the `hero-title`/`jumbo-feature` or a wallpaper numeral behind a region's title, never two rival headlines.
+- **Silence** — coral/cream/ink regions read **40–55% empty**; the **three-column catalog is the one dense exception**. A coral region underfilled gets a wallpaper numeral, never more content.
+- **Restraint** — coral fires as **either accent or one full region per frame** (not both at full strength); one giant-mark per quote; ink-on-fire (never white on coral).
+- **Reference** — aim at a **sports-magazine cover / Saul Bass travel poster** (solid planes at hard edges, condensed caps as architecture); failure looks like a **soft drop-shadowed card deck**.
 
-- **Primary:** 1920×1080 (16:9). Display authored in **`cqw`** (`px ÷ 1920 × 100 = cqw`).
+## The Frame
+
+- **Primary:** 1920×1080 (16:9). Display sizes authored in **`cqw`** (`px ÷ 1920 × 100 = cqw`).
 - **Vertical:** 1080×1920 (9:16). **Square:** 1080×1080 (1:1).
-- **Safe area:** `pad-x` 5cqw; bottom reserves room for the counter + progress bar.
+- **Safe area:** `5cqw` (pad-x) standard frame padding; region edges may bleed full-frame.
 
 **The container law (load-bearing).** Every frame ground sets `container-type: size`; ALL
-frame-relative units are `cqw`/`cqh` against it — never `vw`. Card radii stay px (10–14px); the
-pill radius stays 100px; borders stay 1–1.5px.
+frame-relative units are `cqw`/`cqh` resolved against it — **never `vw`.** A `vw`-sized frame
+inflates whenever it isn't full-screen; `cqw` resolves against the frame at any render size.
 
 ## Colors
 
-Tokens identical to the source. `{colors.bg}` cream is the universal ground; `{colors.primary}`
-cobalt is the **only** accent — every eyebrow, numeral, CTA, chart fill, progress bar, and the 4px
-highlight left-rule. Headlines are `{colors.text}` near-black (never cobalt); body is
-`{colors.text-muted}`; tertiary is `{colors.text-light}`. Cards fill `{colors.card-bg}` (4%) with
-`{colors.border}` (20%) borders. `{colors.positive}`/`{colors.negative}` appear **only inline** on
-directional change chips — never as fills. **No second accent color.**
+Tokens identical to the source. At frame scale the three surfaces are intermixed by composition —
+coral/cream, coral/ink, ink/cream, or single-surface. `{colors.coral}` is both accent (borders,
+icon squares, timeline nodes, eyebrows on cream/ink) and environment (full regions). Headlines:
+ink on cream/coral, cream on ink — **never gray, never white-on-coral.** Eyebrows: coral on
+cream/ink, ink on coral — coral-on-coral does not exist. The only sanctioned gradient is the rare
+135° coral-dark→coral feature region; everything else is flat.
 
 ## Typography
 
-Two ramps. The **reading ramp** (Inter body 0.85cqw muted; Inter eyebrow uppercase 0.08em
-cobalt) carries copy + chrome; the **display/numerical ramp** (Inter `h3` 1.25cqw → `h1`
-4.2cqw near-black; numerals `stat-num`/`metric-value` in cobalt) carries headings and figures.
+Two ramps. The **reading ramp** (Inter body 1.0cqw, body-light 1.5cqw, labels in px) carries copy
+and eyebrows; the **display/hero ramp** (Bebas, `card-title` 1.9cqw → `jumbo-feature` 9.0cqw, plus
+the decorative `background-numeral` 10cqw and `giant-mark` 14cqw) carries every headline and stat.
 
-- **Legibility floor:** any load-bearing line ≥ **1.4cqw**; px chrome (tag/counter) is colophon only.
-- **Fit-to-measure:** size the headline to its length. Cap the block at **≤ 78cqw**; ≤3 words → `h1`; 4–6 → `h2`; 7+ → `h3`. Cobalt numerals scale `metric-value`→`stat-num` by card size.
-- **Headlines near-black, −0.02em**; **eyebrows cobalt, uppercase, 0.08em**; **numerals cobalt 600–700**; **body Inter 400 muted, line 1.6**. No italic, no uppercase body, no cobalt headline.
+- **Legibility floor:** any load-bearing line ≥ **1.4cqw**; px labels are chrome only.
+- **Fit-to-measure:** size the headline to its line length. Cap the block at **≤ 78cqw**; ≤3 words → `hero-title`/`jumbo-feature`; 4–6 → `section-headline`; 7+ → `column-title`.
+- **Every Bebas element is uppercase with ≥1px tracking** (2px standard, 4px hero, 12px jumbo). **Every Inter label is uppercase, 1–4px tracked.** No italic, no underline, no sentence-case Bebas.
 
 ## Depth & Surface
 
-Soft and tinted — never offset. Depth from:
+Flat, with hard color edges. Depth signals only:
 
-- **Tinted cards** — 4% cobalt fill + 20% cobalt 1.5px border + 10–14px radius reads as lifted without offset.
-- **Border-left accent** — the 4px cobalt rule on split-highlight blocks pulls a callout forward.
-- **Rounded corners** — the 10–14px radius is part of the softness; square corners break it.
+- **Hard region boundaries** — the primary structural device.
+- **Accent borders** — 5px coral top (cards), 4px coral left (sidebar tiles), 4px ink (timeline).
+- **45° hatch** — 6% ink texture on coral regions (no depth).
+- **Wallpaper typography** — numerals at 12%, giant marks at 35%, layered behind content.
 
-**Ceiling:** zero box-shadow on content (the only shadow is a soft cobalt CTA _hover_); no opaque cobalt borders; no harsh outlines.
+**Ceiling:** no box-shadow, no elevated card, no soft gradient (save the one 135° coral feature), no rounded rectangle.
 
 ## Shapes
 
-- **100px** — tag pills, CTA, nav buttons (pill chrome).
-- **14/12/10px** — cards by size (large metric / standard stat / detail + mini).
-- **6px** — bar tracks + fills. **50%** — step circles, nav circles, dots, closing rings.
-- **0** — only the progress bar. No square-cornered content.
+- **0 radius** on every rectangle — regions, cards, sidebar tiles, icon squares, info bars, accent lines.
+- **50%** on circles only — nav dots (10px), nav arrows (44px), timeline nodes (20px).
 
 ## Components
 
-- **card-tinted / metric-card** — the universal soft-tint content cards (no shadow).
-- **tag-pill / cta-button / accent-line** — the cobalt pill chrome + the one solid CTA + the 60×4 rule.
-- **bar-track / step-circle / split-highlight** — cobalt data + sequence + callout patterns.
-- **slide-header** (eyebrow + tag pill) — the structural rhythm; **atmosphere** (diagonal/dots/rings) on cover/closing only; **progress-bar** on every frame.
+- **region-split** — the layout device; surfaces meet at a hard edge.
+- **card** (5px coral top) / **sidebar-item** (4px coral left) / **card-icon** (48px coral square) — the only chrome on each is its single coral border.
+- **diagonal-hatch** / **background-numeral** / **giant-mark** — the atmospheric + wallpaper signatures on coral regions.
+- **accent-line** — coral sub-headline rule. **timeline** — ink line, coral nodes, cream halos. **info-bar** — cream-dark footer band.
 
 ## Frame Treatments
 
-> Recipe: ground · container · composes · focal · chrome · accent · silence · Fixed/Free · density.
-> Atmosphere only on cover/closing; content frames carry the slide-header rhythm.
+> Recipe per plate: ground · container · composes · focal · chrome · accent · silence · Fixed/Free · density.
+> Lean centered where the move allows; vary anchor; one idea per region.
 
-### 1 · Cover (identity · move: diagonal accent · left)
+### 1 · Region-Split Cover (identity · move: hard region edge · left)
 
-**Ground** cream + the clipped diagonal cobalt-tint panel (right ~36%) + a 3×3 cobalt dot grid.
-**Composes** accent-line, meta, h1, body sub. **Focal** a 2-line Inter `h1` near-black, left,
-under a cobalt accent-line + meta. **Chrome** counter + progress bar. **Accent** the cobalt line +
-diagonal panel. **Silence** the diagonal panel holds the right third. **Fixed** near-black h1, cobalt
-accents, atmosphere here only. **Free** title, meta. **Density** low.
+**Ground** 38/62 split — `{colors.coral}` top band (hatch + wallpaper numeral) over `{colors.cream}`.
+**Container** grid rows; brand + meta in the coral band, hero title in the cream field. **Composes**
+region-split, diagonal-hatch, background-numeral, hero-title. **Focal** a 2-line `hero-title` in
+ink, second line in `{colors.coral}`, left-anchored in the cream field. **Chrome** Bebas brand left
 
-### 2 · Dashboard (data · move: 3-up metric grid · the dense frame)
+- Bebas meta right in the coral band. **Accent** coral band + coral second line. **Silence** the
+  cream field ~45% empty. **Fixed** ink-on-fire in band, hatch on coral, hard edge. **Free** title
+  copy, which line is coral, meta. **Density** sparse.
 
-**Ground** cream, `pad-x`. **Composes** slide-header (eyebrow + tag-pill), h2, 3× metric/tinted card.
-**Focal** a row of tinted cards — cobalt `metric-value` + Inter label + muted desc + optional
-green/red change chip. **Chrome** eyebrow left, tag-pill right; progress bar. **Accent** the cobalt
-numerals. **Silence** tight — the density exception. **Fixed** 4% tint cards, 20% borders, no shadow,
-cobalt numerals. **Free** figures (from script), labels. **Density** dense-exception.
+### 2 · Feature Stat (anchor · move: scale · coral environment · left)
 
-### 3 · Bar Ranking (data · move: cobalt bars · left)
+**Ground** full `{colors.coral}` with hatch. **Composes** diagonal-hatch, background-numeral,
+section-label, stat headline, body-light. **Focal** a `stat-numeral`/`jumbo-feature` figure or
+2-line headline in ink, with a `background-numeral` (12% ink) behind it as wallpaper. **Chrome** an
+ink `section-label` eyebrow; an optional Inter-300 support line ≤44cqw. **Accent** the coral ground
+IS the environment; ink type, no white. **Silence** ~40% of the coral field empty. **Fixed**
+ink-on-coral, hatch present, wallpaper numeral behind. **Free** the figure, headline, support copy.
+**Density** sparse.
 
-**Ground** cream, `pad-x`. **Composes** eyebrow, h2, bar-track rows. **Focal** 3–5 labeled
-cobalt-fill bars on cobalt-8% tracks with cobalt percentages. **Chrome** eyebrow; progress bar.
-**Accent** the cobalt fills + figures. **Silence** moderate. **Fixed** 6px tracks, cobalt fills.
-**Free** rows, values (from script). **Density** standard.
+### 3 · Quote Layout (quote · move: panel split · giant mark)
 
-### 4 · Pull Quote (quote · move: concentric rings · centered)
+**Ground** 40/60 split — `{colors.coral}` left panel (hatch + giant-mark) + `{colors.black}` right
+panel. **Composes** region-split, giant-mark, body-light, accent-line, quote-attribution.
+**Focal** a 2–3 line pull quote in `{colors.cream}` Inter **weight 300** on the ink panel.
+**Chrome** a `giant-mark` (35% ink) on the coral panel; a `60×4` coral accent-line above the
+attribution. **Accent** coral panel + coral accent-line. **Silence** the coral panel is mostly the
+mark. **Fixed** Inter-300 quote, ink panel, ink-on-coral mark. **Free** quote, attribution, mark
+glyph. **Density** sparse.
 
-**Ground** cream, centered, with faint concentric closing-rings behind. **Composes** quote-mark,
-blockquote, cite. **Focal** a Inter `blockquote` near-black under a 15%-opacity cobalt
-quote-mark; an uppercase cobalt-muted cite beneath. **Accent** the faint rings + quote-mark. **Silence**
-~55%. **Fixed** near-black quote, soft rings. **Free** quote, cite. **Density** low.
+### 4 · Closing Plate (closer · move: cream field + coral band · centered)
 
-### 5 · Split + Highlight (content · move: asymmetric split · left)
+**Ground** `{colors.cream}` field with a bottom `{colors.coral}` band (hatch). **Composes**
+section-label, section-headline/hero-title, accent-line, info-bar. **Focal** a 2-line sign-off in
+ink, centered, with a coral `accent-line` beneath. **Chrome** an ink eyebrow above; a coral band
+footer carrying a Bebas sign-off + year. **Accent** coral band + coral accent-line. **Silence**
+~55% empty cream. **Fixed** centered, ink type, one coral band. **Free** sign-off copy, band
+contents. **Density** sparse.
 
-**Ground** cream, two columns. **Composes** eyebrow, h2, body, split-highlight block. **Focal** an
-Inter body column beside a cobalt-8% highlight block (4px cobalt left rule) carrying an inline pull
-quote. **Accent** the highlight's left rule. **Silence** generous gutter. **Fixed** tinted highlight,
-4px cobalt rule. **Free** body, callout. **Density** standard.
+### 5 · Three-Column Catalog (catalog · move: density — the dense frame · centered head)
 
-### 6 · Closing / CTA (closer · move: centered rings + CTA)
+**Ground** `{colors.cream}` (or `{colors.black}`), `pad-x`. **Composes** section-headline, 3× card.
+**Focal** a centered `section-headline` over three white `card`s (5px coral top, 48px icon square,
+Bebas title, Inter body, coral stat). **Accent** the three coral top borders + icon squares.
+**Silence** tight — the density exception. **Fixed** 5px coral top as sole chrome, no shadow/radius.
+**Free** the three cards' content. **Density** dense-exception.
 
-**Ground** cream + concentric closing-rings. **Composes** accent-line, h1, body, cta-button. **Focal**
-a Inter `h1` near-black, centered, with the one solid cobalt `cta-button` pill below. **Accent**
-the CTA + rings. **Silence** ~60%. **Fixed** one CTA, near-black h1, soft rings. **Free** sign-off, CTA
-label. **Density** low.
+### 6 · Timeline (process · move: horizontal rail · left)
+
+**Ground** `{colors.cream}`, `pad-x`. **Composes** section-headline, timeline. **Focal** the ink
+timeline-line with 4–5 coral nodes (cream halos) and Bebas labels. **Accent** coral nodes.
+**Silence** moderate. **Fixed** ink line, coral nodes, cream halos. **Free** node count, labels.
+**Density** standard.
 
 ## Composition Rules
 
 ### Do
 
-- Start every frame on **warm cream**; let **cobalt carry every accent** (eyebrow, numeral, CTA, bar, progress).
-- Set headlines **near-black, −0.02em**; eyebrows **cobalt uppercase 0.08em**; numerals **cobalt 600–700**.
-- Use **tinted cards** (4% fill, 20% border, 10–14px radius, no shadow); body Inter 400 muted, line 1.6.
-- Keep all chrome **pill-shaped (100px)**; one solid cobalt CTA per closing frame.
-- Reserve **atmosphere** (diagonal panel, dots, rings) for cover/closing; content frames keep the slide-header rhythm.
-- Lean left on cover/dashboard/split, centered on quote/closer.
+- Compose as **multi-surface region splits** — coral / ink / cream meeting at hard edges; the boundary is the layout.
+- Set every Bebas element **uppercase + tracked** (2px standard, 4px hero, 12px jumbo); every Inter label uppercase, 1–4px.
+- Render eyebrows **coral on cream/ink, ink on coral**; headlines ink on cream/coral, cream on ink.
+- Apply the **45° hatch** (6% ink) on coral regions; fill underweight coral regions with a **12% wallpaper numeral**.
+- Use the **5px coral top** (cards) / **4px coral left** (tiles) as the only chrome on those elements.
+- Lean centered on cover sign-offs and catalog heads; left/panel-split on features and quotes.
 
 ### Don't
 
-- No second accent color; no cobalt headlines.
-- No drop shadows on content (only the soft cobalt CTA hover); no opaque cobalt borders.
-- No square corners (save the progress bar); no font substitutes; no uppercase body.
-- Don't use the green/red change chips as general accents — directional comparisons only.
-- Don't fill space with heavier borders — add substance; don't blow a headline edge-to-edge.
+- Don't render Bebas in sentence case or untracked; don't pair it with a non-Inter body sans.
+- Don't add a fourth surface, a drop shadow, an elevation, or a rounded rectangle.
+- Don't put white headlines on coral (always ink) or gray headlines anywhere (gray is body/meta).
+- Don't soften a region boundary with a gradient (except the rare 135° coral feature).
+- Don't fill a coral region with sparse fragments — fully populate it or add a wallpaper numeral / giant mark.
+- Don't blow a headline edge-to-edge — step the ramp down for long lines.
 
 ## Aspect-Ratio Behavior
 
-| Treatment         | 16:9                       | 9:16                           | 1:1                      |
-| ----------------- | -------------------------- | ------------------------------ | ------------------------ |
-| Cover             | title left, diagonal right | title top, diagonal band below | title upper, dots corner |
-| Dashboard         | 3 cards across             | 3 stacked                      | 2×2                      |
-| Bar Ranking       | 3–5 bars                   | 3–5 bars (tighter)             | 3 bars                   |
-| Pull Quote        | centered, rings behind     | centered, taller               | centered                 |
-| Split + Highlight | side-by-side               | stacked                        | stacked                  |
-| Closing / CTA     | centered + CTA             | centered + CTA                 | centered + CTA           |
+| Treatment            | 16:9                       | 9:16                                 | 1:1                  |
+| -------------------- | -------------------------- | ------------------------------------ | -------------------- |
+| Region-Split Cover   | 38/62 rows, title left     | taller coral band, title below       | 40/60, title lower   |
+| Feature Stat         | figure left, numeral right | figure top, numeral behind           | centered figure      |
+| Quote Layout         | 40/60 coral+ink            | stacked: coral mark top, quote below | stacked              |
+| Closing Plate        | cream + bottom coral band  | cream + taller band                  | centered, band below |
+| Three-Column Catalog | head over 3-up             | head top, 3 stacked                  | head top, 2+1        |
+| Timeline             | horizontal rail            | vertical rail                        | compact horizontal   |
 
-`pad-x` holds on the short edge; re-step display above the 1.4cqw floor. The diagonal cover panel
-becomes a top/bottom band on 9:16. Numerals stay Latin Arabic digits in CJK builds.
+Safe area holds the `5cqw` padding on the short edge; re-step display per ratio so no load-bearing
+line drops below the 1.4cqw floor. Bebas runs ~20% wider in CJK — adjust line breaks per ratio.
 
 ## Approved Entities
 
 No real customers, logos, or vendors are defined in the source — render any such mark as a
-placeholder. Figures, metrics, and quotes are content; the system supplies cream + cobalt + grays.
+placeholder. The system supplies surfaces and geometry, not brands.
 
 ## Numerals & Claims (hard rule)
 
-Never invent figures, financials, percentages, or dates at frame scale. Render slots as `— figure —`,
-`{metric}`, `+NN%`, `↑ —`. Metric cards, bar values, and stat cells especially carry placeholders
-until the script supplies them. Directional chips require a real comparison from the script.
+Never invent figures, stats, dates, or counts at frame scale. Render slots as `— figure —`,
+`{metric}`, `N×`. Real numerals appear only when the script supplies them — the feature stat,
+catalog, and timeline especially carry placeholders, not fabricated values. Wallpaper numerals
+(01, 02…) are decorative and may be ordinal.
 
 ## Pre-Render Self-Audit
 
-- **Squint** — one near-black headline or cobalt numeral dominates per frame.
-- **Silence** — content frames balanced, not crowded; only the dashboard runs dense.
-- **Single accent** — cobalt only; headlines near-black; positive/negative inline only.
-- **Type** — Inter headings −0.02em near-black, cobalt eyebrows 0.08em + numerals; Inter body muted line 1.6; ≥1.4cqw floor.
-- **Depth** — tinted cards (no shadow), soft rounded corners, 20% cobalt borders; no square content corners.
-- **Anchor** — left on cover/dashboard/split, centered on quote/closer; atmosphere on cover/closing only.
+- **Squint** — one focal element per region dominates at 3–5× its neighbor.
+- **Silence** — sparse frames 40–55% empty; only the catalog runs dense.
+- **Surfaces** — two or three of coral/ink/cream, meeting at hard edges; no fourth surface.
+- **Type** — Bebas uppercase + tracked, fit-to-measure; ink-on-coral; eyebrow color correct for surface; ≥1.4cqw floor.
+- **Depth** — 0 shadow, 0 rounded rectangle; hatch + wallpaper carry texture.
+- **Anchor** — centered on sign-offs/heads, panel/left on features/quotes; no 3 consecutive frames share an anchor.
 - **Fabrication** — every numeral traces to the script, else placeholder.
 
 ## Known Gaps
 
-- **Motion intentionally out of scope.** frame.md specifies composition only; the source's 500ms translateX transitions + bar-fill animations are deck mechanics.
-- **Inter + Inter via Google Fonts.** CJK pairing (Noto Sans SC 700 display / Noto Serif SC 400 body) carries over; the eyebrow's uppercase+tracking signal weakens in CJK — pair it with the accent-line.
-- **9:16 / 1:1 are guidance**; verify the floor and that the diagonal panel reflows to a band.
-- Diagonal panel (clip-path), dot grid, concentric rings, and bars are CSS-only; no external imagery is required.
+- **Motion intentionally out of scope.** frame.md specifies composition only; timing and transitions are a later stage. The 0.6s opacity fade in the source is a deck mechanic, not a frame spec.
+- **Inter + Inter via Google Fonts.** CJK pairing (ZCOOL XiaoWei / Yozai) carries over from the source's CJK section; Bebas runs ~20% wider in CJK.
+- **9:16 / 1:1 are guidance**, not pixel-locked; verify the legibility floor per ratio.
+- The 45° hatch, wallpaper numerals, giant marks, and timeline dash are CSS-only; no external imagery is required.
 
 
 ## Font loading (auto-generated)
