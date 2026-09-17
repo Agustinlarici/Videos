@@ -20,7 +20,7 @@ music: none
 - scene: Real industrial-automation photo, texture-close, with the site's own problem language fragmenting across it
 - duration: 5s
 - transition_in: cut
-- status: outline
+- status: animated
 - src: compositions/frames/01-il-rumore.html
 - type: hook
 - persuasion: Pain validation
@@ -69,7 +69,7 @@ Scene 3 (3.2–5.0s): the dashboard photo settles full-bleed as the focal image 
 - scene: The dashboard photo dissolves into the brand tagline card, closing on the wordmark
 - duration: 5s
 - transition_in: crossfade
-- status: outline
+- status: animated
 - src: compositions/frames/03-la-priorita.html
 - type: branding
 - persuasion: Identity resolution — the brand's own headline claim (not a stat) is the payoff the whole video resolves to
