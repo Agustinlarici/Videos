@@ -1,0 +1,341 @@
+<template>
+      <style>
+        @font-face {
+          font-family: "Inter";
+          font-weight: 400;
+          font-style: normal;
+          font-display: block;
+          src: url("assets/fonts/Inter-Regular.woff2") format("woff2");
+        }
+
+        #root {
+          position: absolute;
+          inset: 0;
+          overflow: hidden;
+          container-type: size;
+          font-family: "Inter", sans-serif;
+        }
+
+        .clip {
+          position: absolute;
+          inset: 0;
+        }
+
+        /* full-bleed ground — lives on a dedicated clip layer, never on #root */
+        .pc03-ground {
+          background: #ffffff;
+        }
+
+        .pc03-camera-wrap {
+          display: block;
+        }
+
+        /* the one camera wrapper — its transform is the ONLY writer of this element's transform */
+        .pc03-camera {
+          position: absolute;
+          inset: 0;
+          transform-origin: 50% 50%;
+          will-change: transform;
+        }
+
+        /* caption keep-out: everything lives in the top 83% even though captions are disabled */
+        .pc03-safe {
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 0;
+          height: 83cqh;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          padding: 0 5cqw;
+          gap: 2.6cqw;
+        }
+
+        .pc03-headline {
+          margin: 0;
+          font-family: "Inter", sans-serif;
+          font-weight: 400;
+          font-size: 4.2cqw;
+          line-height: 1.0;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+          color: #0f1117;
+          text-align: center;
+          max-width: 88cqw;
+        }
+
+        .pc03-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 1.7cqw;
+          width: 100%;
+          max-width: 90cqw;
+        }
+
+        .pc03-card {
+          background: #ffffff;
+          border-top: 0.26cqw solid #2563eb;
+          border-radius: 0;
+          box-shadow: none;
+          padding: 2cqw;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 1cqw;
+        }
+
+        .pc03-card-icon {
+          width: 2.5cqw;
+          height: 2.5cqw;
+          background: #2563eb;
+          border-radius: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex: 0 0 auto;
+        }
+
+        .pc03-icon-svg {
+          width: 62%;
+          height: 62%;
+          overflow: visible;
+        }
+
+        .pc03-card-title {
+          margin: 0;
+          font-family: "Inter", sans-serif;
+          font-weight: 400;
+          font-size: 1.9cqw;
+          line-height: 1.1;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          color: #0f1117;
+        }
+
+        .pc03-card-body {
+          margin: 0;
+          font-family: "Inter", sans-serif;
+          font-weight: 400;
+          font-size: 1.0cqw;
+          line-height: 1.7;
+          color: #6b6b6b;
+        }
+
+        .pc03-word {
+          display: inline-block;
+        }
+      </style>
+
+      <div id="root" data-composition-id="03-per-chi" data-width="1920" data-height="1080" data-duration="4.9">
+        <div id="pc03-ground" class="clip pc03-ground" data-start="0" data-duration="4.9" data-track-index="0"></div>
+
+        <div id="pc03-camera-wrap" class="clip pc03-camera-wrap" data-start="0" data-duration="4.9" data-track-index="1">
+          <div class="pc03-camera" id="pc03-camera">
+            <div class="pc03-safe">
+              <h1 class="pc03-headline" id="pc03-headline">Non ripartiamo mai da zero</h1>
+
+              <div class="pc03-grid">
+                <!-- Card 1 — Agenzia IA (chat bubble) -->
+                <div class="pc03-card" id="pc03-card-1">
+                  <div class="pc03-card-icon">
+                    <svg class="pc03-icon-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M20 24 H80 A8 8 0 0 1 88 32 V58 A8 8 0 0 1 80 66 H46 L30 80 V66 H20 A8 8 0 0 1 12 58 V32 A8 8 0 0 1 20 24 Z"
+                        fill="none"
+                        stroke="#FFFFFF"
+                        stroke-width="6"
+                        stroke-linejoin="round"
+                        stroke-linecap="round"
+                      />
+                      <circle id="pc03-dot1" cx="34" cy="45" r="4.5" fill="#FFFFFF" />
+                      <circle id="pc03-dot2" cx="50" cy="45" r="4.5" fill="#FFFFFF" />
+                      <circle id="pc03-dot3" cx="66" cy="45" r="4.5" fill="#FFFFFF" />
+                    </svg>
+                  </div>
+                  <h2 class="pc03-card-title">Agenzia IA</h2>
+                  <p class="pc03-card-body" id="pc03-body-1"><span class="pc03-word">Assistenti</span> <span class="pc03-word">che</span> <span class="pc03-word">rispondono,</span> <span class="pc03-word">prenotano</span> <span class="pc03-word">e</span> <span class="pc03-word">qualificano</span> <span class="pc03-word">da</span> <span class="pc03-word">soli.</span></p>
+                </div>
+
+                <!-- Card 2 — Manifatturiero (checkmark-in-gear) -->
+                <div class="pc03-card" id="pc03-card-2">
+                  <div class="pc03-card-icon">
+                    <svg class="pc03-icon-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                      <g id="pc03-gear-group">
+                        <circle cx="50" cy="50" r="26" fill="none" stroke="#FFFFFF" stroke-width="6" />
+                        <rect x="46" y="8" width="8" height="12" fill="#FFFFFF" />
+                        <rect x="46" y="80" width="8" height="12" fill="#FFFFFF" />
+                        <rect x="8" y="46" width="12" height="8" fill="#FFFFFF" />
+                        <rect x="80" y="46" width="12" height="8" fill="#FFFFFF" />
+                        <rect x="21" y="21" width="10" height="10" fill="#FFFFFF" transform="rotate(45 26 26)" />
+                        <rect x="69" y="21" width="10" height="10" fill="#FFFFFF" transform="rotate(45 74 26)" />
+                        <rect x="21" y="69" width="10" height="10" fill="#FFFFFF" transform="rotate(45 26 74)" />
+                        <rect x="69" y="69" width="10" height="10" fill="#FFFFFF" transform="rotate(45 74 74)" />
+                      </g>
+                      <path
+                        id="pc03-check"
+                        d="M36 52 L46 62 L66 40"
+                        fill="none"
+                        stroke="#FFFFFF"
+                        stroke-width="7"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-dasharray="46"
+                        stroke-dashoffset="46"
+                      />
+                    </svg>
+                  </div>
+                  <h2 class="pc03-card-title">Manifatturiero</h2>
+                  <p class="pc03-card-body" id="pc03-body-2"><span class="pc03-word">Controllo</span> <span class="pc03-word">qualità</span> <span class="pc03-word">che</span> <span class="pc03-word">non</span> <span class="pc03-word">dimentica</span> <span class="pc03-word">nulla.</span></p>
+                </div>
+
+                <!-- Card 3 — Business & Ristorazione (fork-and-plate) -->
+                <div class="pc03-card" id="pc03-card-3">
+                  <div class="pc03-card-icon">
+                    <svg class="pc03-icon-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="50" cy="60" r="26" fill="none" stroke="#FFFFFF" stroke-width="5" />
+                      <line x1="40" y1="14" x2="40" y2="30" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" />
+                      <line x1="50" y1="12" x2="50" y2="30" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" />
+                      <line x1="60" y1="14" x2="60" y2="30" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" />
+                      <path
+                        d="M40 30 C40 40 50 38 50 30 C50 38 60 40 60 30"
+                        fill="none"
+                        stroke="#FFFFFF"
+                        stroke-width="4"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <line x1="50" y1="34" x2="50" y2="80" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" />
+                      <rect
+                        id="pc03-glint"
+                        x="12"
+                        y="28"
+                        width="14"
+                        height="70"
+                        fill="rgba(255,255,255,0.55)"
+                        transform="rotate(-28 19 63)"
+                        opacity="0"
+                      />
+                    </svg>
+                  </div>
+                  <h2 class="pc03-card-title">Business &amp; Ristorazione</h2>
+                  <p class="pc03-card-body" id="pc03-body-3"><span class="pc03-word">Il</span> <span class="pc03-word">tuo</span> <span class="pc03-word">locale,</span> <span class="pc03-word">digitalizzato</span> <span class="pc03-word">in</span> <span class="pc03-word">un</span> <span class="pc03-word">unico</span> <span class="pc03-word">pannello.</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script
+        src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"
+        integrity="sha384-sG0Hv1tP1lZCk9KQmrIbY/XNwi+OY84GQqhMscbnsoBFqAz8KNCil1kvfL3Hbbk2"
+        crossorigin="anonymous"
+      ></script>
+      <script>
+        (function () {
+          window.__timelines = window.__timelines || {};
+          var tl = gsap.timeline({ paused: true });
+          window.__timelines["03-per-chi"] = tl;
+
+          // ── Scene 1 (0.0–0.6s): headline cuts in ──────────────────────────
+          tl.fromTo(
+            "#pc03-headline",
+            { opacity: 0, y: -18 },
+            { opacity: 1, y: 0, duration: 0.4, ease: "power4.out" },
+            0,
+          );
+
+          // ── Scene 2 (0.6–3.2s): three cards stagger-assemble left→right ──
+          var CARD_DUR = 0.45;
+          var CARD1_AT = 0.6;
+          var CARD2_AT = 1.1;
+          var CARD3_AT = 1.6;
+
+          // short fade + slide directly into slot — no scatter, no bounce (out-ease only)
+          tl.fromTo(
+            "#pc03-card-1",
+            { opacity: 0, x: -36, y: 22 },
+            { opacity: 1, x: 0, y: 0, duration: CARD_DUR, ease: "power3.out" },
+            CARD1_AT,
+          );
+          tl.fromTo(
+            "#pc03-card-2",
+            { opacity: 0, x: -36, y: 22 },
+            { opacity: 1, x: 0, y: 0, duration: CARD_DUR, ease: "power3.out" },
+            CARD2_AT,
+          );
+          tl.fromTo(
+            "#pc03-card-3",
+            { opacity: 0, x: -36, y: 22 },
+            { opacity: 1, x: 0, y: 0, duration: CARD_DUR, ease: "power3.out" },
+            CARD3_AT,
+          );
+
+          // per-word body reveal, immediately after each card lands
+          var WORD_DUR = 0.28;
+          var WORD_STAGGER = 0.05;
+
+          function revealWords(selector, at) {
+            tl.fromTo(
+              selector,
+              { opacity: 0, y: 10 },
+              { opacity: 1, y: 0, duration: WORD_DUR, ease: "power2.out", stagger: WORD_STAGGER },
+              at,
+            );
+          }
+
+          revealWords("#pc03-body-1 .pc03-word", CARD1_AT + CARD_DUR);
+          revealWords("#pc03-body-2 .pc03-word", CARD2_AT + CARD_DUR);
+          revealWords("#pc03-body-3 .pc03-word", CARD3_AT + CARD_DUR);
+
+          // ── icon enrichment — internal parts wake up right after each card lands,
+          //    all settle well before the 3.2s hold so nothing competes with the camera ──
+
+          // Card 1 — chat bubble: three dots pop in sequence (typing cue)
+          var dots = ["#pc03-dot1", "#pc03-dot2", "#pc03-dot3"];
+          tl.fromTo(
+            dots,
+            { opacity: 0, scale: 0 },
+            { opacity: 1, scale: 1, duration: 0.22, ease: "back.out(1.5)", stagger: 0.13, transformOrigin: "50% 50%" },
+            CARD1_AT + CARD_DUR + 0.05,
+          );
+
+          // Card 2 — gear rotates open, then the checkmark draws in
+          var gearGroup = document.getElementById("pc03-gear-group");
+          var gearState = { deg: 0 };
+          tl.to(
+            gearState,
+            {
+              deg: 32,
+              duration: 0.7,
+              ease: "power2.out",
+              onUpdate: function () {
+                gearGroup.setAttribute("transform", "rotate(" + gearState.deg + " 50 50)");
+              },
+            },
+            CARD2_AT + CARD_DUR + 0.05,
+          );
+          tl.to(
+            "#pc03-check",
+            { strokeDashoffset: 0, duration: 0.35, ease: "power1.out" },
+            CARD2_AT + CARD_DUR + 0.35,
+          );
+
+          // Card 3 — a single glint sweeps once across the fork-and-plate
+          var GLINT_AT = CARD3_AT + CARD_DUR + 0.05;
+          tl.fromTo(
+            "#pc03-glint",
+            { opacity: 0, x: -14 },
+            { opacity: 0.9, x: 0, duration: 0.3, ease: "power1.out" },
+            GLINT_AT,
+          );
+          tl.to("#pc03-glint", { opacity: 0, x: 14, duration: 0.35, ease: "power1.in" }, GLINT_AT + 0.3);
+
+          // ── Scene 3 (3.2–4.5s): grid holds; the only camera move in the frame ──
+          var camera = document.getElementById("pc03-camera");
+          tl.to(camera, { scale: 1.03, duration: 1.3, ease: "power1.inOut" }, 3.2);
+        })();
+      </script>
+    </template>

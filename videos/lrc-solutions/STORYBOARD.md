@@ -69,7 +69,7 @@ Scene 3 (2.6–3.5s): the completed 3-line headline holds still and reads — no
 - scene: Three-Column Catalog — the three real service verticals assemble as cards, fast stagger
 - duration: 4.5s
 - transition_in: push-slide LEFT
-- status: outline
+- status: animated
 - src: compositions/frames/03-per-chi.html
 - type: feature_showcase
 - persuasion: Rule of three

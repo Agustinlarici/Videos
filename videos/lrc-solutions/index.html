@@ -42,33 +42,43 @@
       data-height="1080"
     >
       <div
-        id="el-01-il-rumore"
+        id="el-01-chi-siamo"
         class="scene"
-        data-composition-id="01-il-rumore"
-        data-composition-src="compositions/frames/01-il-rumore.html"
+        data-composition-id="01-chi-siamo"
+        data-composition-src="compositions/frames/01-chi-siamo.html"
         data-start="0"
-        data-duration="5.4"
+        data-duration="3.4"
         data-track-index="0"
       ></div>
 
       <div
-        id="el-02-la-lettura"
+        id="el-02-cosa-facciamo"
         class="scene"
-        data-composition-id="02-la-lettura"
-        data-composition-src="compositions/frames/02-la-lettura.html"
-        data-start="5"
-        data-duration="5.5"
+        data-composition-id="02-cosa-facciamo"
+        data-composition-src="compositions/frames/02-cosa-facciamo.html"
+        data-start="3"
+        data-duration="4"
         data-track-index="1"
       ></div>
 
       <div
-        id="el-03-la-priorita"
+        id="el-03-per-chi"
         class="scene"
-        data-composition-id="03-la-priorita"
-        data-composition-src="compositions/frames/03-la-priorita.html"
-        data-start="10"
-        data-duration="5"
+        data-composition-id="03-per-chi"
+        data-composition-src="compositions/frames/03-per-chi.html"
+        data-start="6.5"
+        data-duration="4.9"
         data-track-index="0"
+      ></div>
+
+      <div
+        id="el-04-chiudiamo"
+        class="scene"
+        data-composition-id="04-chiudiamo"
+        data-composition-src="compositions/frames/04-chiudiamo.html"
+        data-start="11"
+        data-duration="4"
+        data-track-index="1"
       ></div>
 
     </div>
@@ -78,10 +88,12 @@
       window.__timelines["main"] = gsap.timeline({ paused: true });
       // ── frame transitions (injected by transitions.mjs) ──
       (function () { var tl = window.__timelines["main"];
-        tl.to("#el-01-il-rumore", { scale: 2.5, opacity: 0, filter: "blur(8px)", duration: 0.4, ease: "power3.in" }, 5);
-        tl.fromTo("#el-02-la-lettura", { scale: 0.5, opacity: 0, filter: "blur(8px)" }, { scale: 1, opacity: 1, filter: "blur(0px)", duration: 0.4, ease: "power3.out" }, 5);
-        tl.to("#el-02-la-lettura", { opacity: 0, duration: 0.5, ease: "power2.inOut" }, 10);
-        tl.fromTo("#el-03-la-priorita", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "power2.inOut" }, 10);
+        tl.to("#el-01-chi-siamo", { scaleX: 0, transformOrigin: "left center", duration: 0.4, ease: "power3.inOut" }, 3);
+        tl.fromTo("#el-02-cosa-facciamo", { scaleX: 0, transformOrigin: "right center", opacity: 1 }, { scaleX: 1, transformOrigin: "right center", duration: 0.4, ease: "power3.inOut" }, 3);
+        tl.to("#el-02-cosa-facciamo", { x: -1920, duration: 0.5, ease: "power3.inOut" }, 6.5);
+        tl.fromTo("#el-03-per-chi", { x: 1920, opacity: 1 }, { x: 0, duration: 0.5, ease: "power3.inOut" }, 6.5);
+        tl.to("#el-03-per-chi", { scale: 2.5, opacity: 0, filter: "blur(8px)", duration: 0.4, ease: "power3.in" }, 11);
+        tl.fromTo("#el-04-chiudiamo", { scale: 0.5, opacity: 0, filter: "blur(8px)" }, { scale: 1, opacity: 1, filter: "blur(0px)", duration: 0.4, ease: "power3.out" }, 11);
         tl.to({}, { duration: 15 }, 0); // full-span anchor — main.duration() == composition total (Studio master duration)
       })();
     </script>
