@@ -1,0 +1,216 @@
+<template>
+<div
+  id="root"
+  data-composition-id="02-cosa-facciamo"
+  data-width="1920"
+  data-height="1080"
+  data-duration="3.5"
+>
+  <style>
+    @font-face{font-family:"Inter";font-weight:400;font-style:normal;font-display:block;src:url("assets/fonts/Inter-Regular.woff2") format("woff2");}
+
+    #root {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      container-type: size;
+      font-family: "Inter", sans-serif;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: geometricPrecision;
+    }
+    #root *,
+    #root *::before,
+    #root *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Root-level layout host — spans the full shot; its own pieces are nested
+       one level in so each keeps its authored position (see markup comment). */
+    .cf02-scene {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+
+    /* Full-bleed coral (brand-blue) ground + 45deg hatch — rides on the
+       assembled index root's own base color; never painted on #root itself. */
+    .cf02-bg {
+      position: absolute;
+      inset: 0;
+      background-color: #2563EB;
+      z-index: 0;
+    }
+    .cf02-bg::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: repeating-linear-gradient(
+        45deg,
+        transparent 0 20px,
+        rgba(0, 0, 0, 0.06) 20px 40px
+      );
+      pointer-events: none;
+    }
+
+    /* Wallpaper numeral — 12% ink, seated behind the headline block */
+    .cf02-numeral {
+      position: absolute;
+      top: 33cqh;
+      left: 8cqw;
+      font-size: 10cqw;
+      line-height: 1;
+      font-weight: 400;
+      color: rgba(0, 0, 0, 0.12);
+      z-index: 1;
+      user-select: none;
+      transform-origin: left center;
+    }
+
+    .cf02-eyebrow {
+      position: absolute;
+      top: 27cqh;
+      left: 5cqw;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: #0F1117;
+      z-index: 2;
+      opacity: 0;
+    }
+
+    .cf02-line {
+      position: absolute;
+      left: 5cqw;
+      max-width: 70cqw;
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 0.6cqw;
+      font-size: 3.2cqw;
+      font-weight: 400;
+      line-height: 1;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #0F1117;
+      z-index: 2;
+    }
+    .cf02-line-1 { top: 40cqh; }
+    .cf02-line-2 { top: 47cqh; }
+    .cf02-line-3 { top: 54cqh; }
+
+    .cf02-word {
+      display: inline-block;
+      opacity: 0;
+      will-change: transform, opacity;
+    }
+  </style>
+
+  <!-- Single root-level clip spans the whole shot: a plain full-frame layout
+       host. Its own timed pieces are nested one level in, so each keeps its
+       AUTHORED position instead of the runtime's root-level auto top:0/left:0. -->
+  <div class="clip cf02-scene" data-start="0" data-duration="3.5" data-track-index="0">
+    <!-- Scene 1 (0.0-0.5s): full-bleed blue ground + hatch + wallpaper numeral, static -->
+    <div class="clip cf02-bg" data-start="0" data-duration="3.5" data-track-index="0"></div>
+
+    <div class="clip cf02-numeral" data-start="0" data-duration="3.5" data-track-index="1">01</div>
+
+    <!-- Scene 2 (0.5-2.6s): eyebrow cuts in, then the mission line reveals in three
+         staggered phrase-chunks, each phrase's words rising in on its own beat -->
+    <div class="clip cf02-eyebrow" data-start="0.5" data-duration="3.0" data-track-index="2">
+      Cosa facciamo
+    </div>
+
+    <div class="clip cf02-line cf02-line-1" data-start="0.7" data-duration="2.8" data-track-index="3">
+      <span class="cf02-word">Trasformiamo</span><span class="cf02-word">dati</span><span class="cf02-word">di</span><span class="cf02-word">fabbrica</span>
+    </div>
+
+    <div class="clip cf02-line cf02-line-2" data-start="1.35" data-duration="2.15" data-track-index="4">
+      <span class="cf02-word">e</span><span class="cf02-word">processi</span><span class="cf02-word">ripetitivi</span>
+    </div>
+
+    <div class="clip cf02-line cf02-line-3" data-start="2.0" data-duration="1.5" data-track-index="5">
+      <span class="cf02-word">in</span><span class="cf02-word">decisioni</span><span class="cf02-word">concrete.</span>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+  <script>
+    (function () {
+      var scriptEl = document.currentScript;
+      var rootEl = scriptEl.closest('#root');
+
+      window.__timelines = window.__timelines || {};
+      var tl = gsap.timeline({ paused: true });
+      window.__timelines["02-cosa-facciamo"] = tl;
+
+      // ---- Beats — fixed upstream by the shot sequence (content-driven, precomputed) ----
+      var EYEBROW_START = 0.5;
+      var PHRASE_STARTS = [0.7, 1.35, 2.0]; // Scene 2: staggered phrase-by-phrase reveal
+      var WORD_STAGGER = 0.045;
+      var WORD_DUR = 0.4;
+      var IDLE_START = 2.6; // Scene 3: headline holds, numeral gets one low jitter
+      var TOTAL_DURATION = 3.5;
+      var IDLE_DUR = TOTAL_DURATION - IDLE_START;
+      var IDLE_PERIOD = 1.6;
+      var IDLE_CYCLES = IDLE_DUR / IDLE_PERIOD; // ~0.56 — within IDLE_DUR/3..IDLE_DUR/1.5
+
+      var eyebrowEl = rootEl.querySelector(".cf02-eyebrow");
+      var lineEls = [
+        rootEl.querySelector(".cf02-line-1"),
+        rootEl.querySelector(".cf02-line-2"),
+        rootEl.querySelector(".cf02-line-3"),
+      ];
+      var numeralEl = rootEl.querySelector(".cf02-numeral");
+
+      // ---- Eyebrow: a fast, sharp cut-in ----
+      tl.fromTo(
+        eyebrowEl,
+        { opacity: 0, x: -18 },
+        { opacity: 1, x: 0, duration: 0.22, ease: "power4.out" },
+        EYEBROW_START
+      );
+
+      // ---- Mission line: three phrase-chunks, each landing on its own beat,
+      //      each phrase's own words staggering in (fast, more movement, never a dump) ----
+      lineEls.forEach(function (lineEl, i) {
+        var words = lineEl.querySelectorAll(".cf02-word");
+        tl.fromTo(
+          words,
+          { opacity: 0, y: 18 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: WORD_DUR,
+            ease: "power3.out",
+            stagger: WORD_STAGGER,
+          },
+          PHRASE_STARTS[i]
+        );
+      });
+
+      // ---- Scene 3: headline holds still; the wallpaper numeral gets a single,
+      //      low-amplitude, finite sine jitter (never a loop) as its only residual life ----
+      var phase = { p: 0 };
+      tl.to(
+        phase,
+        {
+          p: Math.PI * 2 * IDLE_CYCLES,
+          duration: IDLE_DUR,
+          ease: "none",
+          onUpdate: function () {
+            var s = Math.sin(phase.p);
+            var y = s * 2.5; // Y_AMP_PX
+            var scale = 1 + s * 0.01; // SCALE_AMP
+            numeralEl.style.transform =
+              "translateY(" + y.toFixed(3) + "px) scale(" + scale.toFixed(4) + ")";
+          },
+        },
+        IDLE_START
+      );
+    })();
+  </script>
+</div>
+</template>

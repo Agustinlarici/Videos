@@ -1,0 +1,197 @@
+<template>
+<style>
+  @font-face {
+    font-family: "Inter";
+    font-weight: 400;
+    font-style: normal;
+    font-display: block;
+    src: url("assets/fonts/Inter-Regular.woff2") format("woff2");
+  }
+
+  #root {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    container-type: size;
+    overflow: hidden;
+    font-family: "Inter", sans-serif;
+  }
+
+  #root .cs01-ground {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* --- 38% blue band (top) --- */
+  #root .cs01-band {
+    position: relative;
+    flex: 0 0 38%;
+    width: 100%;
+    background: #2563EB;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  #root .cs01-band::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: repeating-linear-gradient(45deg, transparent 0 20px, rgba(0, 0, 0, 0.06) 20px 40px);
+    pointer-events: none;
+  }
+  #root .cs01-eyebrow {
+    position: absolute;
+    top: 4cqw;
+    left: 5cqw;
+    z-index: 2;
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #0F1117;
+  }
+  #root .cs01-word-slot {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    padding: 0 5cqw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #root .cs01-word {
+    display: inline-block;
+    font-family: "Inter", sans-serif;
+    font-size: 4.2cqw;
+    line-height: 1;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #0F1117;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  /* --- 62% cream field (bottom) --- */
+  #root .cs01-field {
+    position: relative;
+    flex: 1 1 62%;
+    width: 100%;
+    background: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #root .cs01-hero-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+  }
+  #root .cs01-hero-title {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    font-size: 6.5cqw;
+    line-height: 0.9;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #0F1117;
+    text-align: center;
+    white-space: nowrap;
+  }
+  #root .cs01-accent-line {
+    margin-top: 1.4cqw;
+    width: 4cqw;
+    height: 0.25cqw;
+    min-height: 3px;
+    background: #2563EB;
+    transform: scaleX(0);
+    transform-origin: left center;
+  }
+</style>
+
+<div id="root" data-composition-id="01-chi-siamo">
+  <div class="clip cs01-ground" data-start="0" data-duration="3" data-track-index="0">
+    <div class="cs01-band">
+      <div class="cs01-eyebrow">LRC IT Solutions</div>
+      <div class="cs01-word-slot">
+        <span class="cs01-word" id="cs01-band-word"></span>
+      </div>
+    </div>
+    <div class="cs01-field">
+      <div class="cs01-hero-wrap" id="cs01-hero-wrap">
+        <h1 class="cs01-hero-title">LRC IT Solutions</h1>
+        <div class="cs01-accent-line" id="cs01-accent-line"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  // Lookups are scoped to this template's own clone via data-composition-id.
+  var scope = document.querySelector('[data-composition-id="01-chi-siamo"]');
+  var bandWordEl = scope.querySelector("#cs01-band-word");
+  var heroWrapEl = scope.querySelector("#cs01-hero-wrap");
+  var accentLineEl = scope.querySelector("#cs01-accent-line");
+
+  // discrete-text-sequence: sparse {t, text} states, reverse-searched each
+  // frame — the swap itself is the beat, no tween between states.
+  var BAND_WORDS = [
+    { t: 0.0, text: "Business Intelligence." },
+    { t: 0.55, text: "Automazione." },
+    { t: 1.1, text: "Intelligenza Artificiale." },
+  ];
+
+  function textAt(time) {
+    for (var i = BAND_WORDS.length - 1; i >= 0; i--) {
+      if (time >= BAND_WORDS[i].t) return BAND_WORDS[i].text;
+    }
+    return "";
+  }
+
+  var tl = gsap.timeline({ paused: true });
+
+  // Scene 1 (0.0-1.8s): hard-cut word cycle in the blue band.
+  var driver = { t: 0 };
+  tl.to(
+    driver,
+    {
+      t: 1.8,
+      duration: 1.8,
+      ease: "none",
+      onUpdate: function () {
+        bandWordEl.textContent = textAt(driver.t);
+      },
+    },
+    0
+  );
+  // A tiny punch on each cut — energy on the beat, never a fade/slide.
+  BAND_WORDS.forEach(function (w) {
+    tl.fromTo(
+      bandWordEl,
+      { scale: 1.06 },
+      { scale: 1, duration: 0.16, ease: "power3.out" },
+      w.t
+    );
+  });
+
+  // Scene 2 (1.8-3.0s): the cream field resolves — hard flash-in, no fade/slide.
+  tl.set(heroWrapEl, { autoAlpha: 0 }, 0);
+  tl.set(heroWrapEl, { autoAlpha: 1 }, 1.8);
+
+  // Accent line draws in left -> right immediately after the resolve.
+  tl.set(accentLineEl, { scaleX: 0 }, 0);
+  tl.to(accentLineEl, { scaleX: 1, duration: 0.35, ease: "power2.out" }, 1.9);
+
+  window.__timelines = window.__timelines || {};
+  window.__timelines["01-chi-siamo"] = tl;
+})();
+</script>
+</template>

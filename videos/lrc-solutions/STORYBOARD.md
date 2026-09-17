@@ -22,7 +22,7 @@ style_preset: coral
 - scene: Region-Split Cover — a blue top band cycles the three service words fast, then the cream field resolves on the company name
 - duration: 3s
 - transition_in: cut
-- status: outline
+- status: animated
 - src: compositions/frames/01-chi-siamo.html
 - type: hook
 - persuasion: Category announcement
@@ -45,7 +45,7 @@ Scene 2 (1.8–3.0s): the cream field resolves — a `hero-title` "LRC IT SOLUTI
 - scene: Feature Stat — full blue environment, the site's own mission line reveals phrase by phrase over a wallpaper numeral "01"
 - duration: 3.5s
 - transition_in: squeeze
-- status: outline
+- status: animated
 - src: compositions/frames/02-cosa-facciamo.html
 - type: product_intro
 - persuasion: Value stacking
@@ -93,7 +93,7 @@ Scene 3 (3.2–4.5s): the completed 3-card grid holds near-static with one slow,
 - scene: Closing Plate — the tagline assembles fast, the wordmark lands, a contact line completes the sign-off
 - duration: 4s
 - transition_in: zoom-through
-- status: outline
+- status: animated
 - src: compositions/frames/04-chiudiamo.html
 - type: branding
 - persuasion: Identity resolution — the brand's own tagline (not a stat) is the payoff
