@@ -1,0 +1,32 @@
+{
+  "schema": "hyperframes.capture.icons.v1",
+  "headline": {
+    "file": "assets/favicon.svg",
+    "source": "assets/icon-icon-any.svg",
+    "rank": 0,
+    "shape": "badge",
+    "reason": "no bare-mark candidate among 2 icon(s); used the best-ranked badge"
+  },
+  "icons": [
+    {
+      "file": "assets/icon-icon-any.svg",
+      "url": "https://www.lrc-solutions.com/icon.svg?icon.04q2hnigd982f.svg",
+      "rel": "icon",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "rank": 0,
+      "shape": "badge",
+      "shapeReason": "first painted element is a full-bleed rounded rect (64x64 of 64x64)"
+    },
+    {
+      "file": "assets/icon-apple-touch-icon-180x180.png",
+      "url": "https://www.lrc-solutions.com/apple-icon.png?apple-icon.153exz1lbhpre.png",
+      "rel": "apple-touch-icon",
+      "sizes": "180x180",
+      "type": "image/png",
+      "rank": 1,
+      "shape": "badge",
+      "shapeReason": "4 of 4 edge midpoints are opaque, so the drawing carries a backdrop"
+    }
+  ]
+}

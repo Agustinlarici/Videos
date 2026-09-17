@@ -1,0 +1,114 @@
+[a] LRC IT Solutions
+[a] Progetti
+[a] Come lavoriamo
+[a] Contatti
+[a] Parliamo
+[h1] Il tuo processo.
+[span] La nostra priorità.
+[p] Trasformiamo dati di fabbrica e processi ripetitivi in decisioni concrete, con dashboard, automazione e assistenti AI costruiti su misura.
+[a] Parliamo del tuo processo
+[a] Scopri i servizi
+[span] I nostri sistemi
+[h2] Non ripartiamo mai da zero
+[p] Il manifatturiero resta la nostra base, ma applichiamo la stessa tecnologia a tre aree diverse. Ecco come si dividono i sistemi che abbiamo costruito.
+[span] Agenzia IA
+[h3] Assistenti che rispondono, prenotano e qualificano da soli
+[p] Progettiamo bot e assistenti virtuali che lavorano davvero: rispondono su chat e telefono, fissano appuntamenti e qualificano i contatti in autonomia, 24 ore su 24. Il nostro bot per la reception ne è un esempio concreto.
+[span] Bot AI per la reception
+[span] Intelligenza Artificiale
+[span] Assistente online 24/7
+[span] Buonasera, avete un tecnico disponibile domani mattina?
+[span] Sì, ho un appuntamento libero alle 9:30. Confermo?
+[span] Manifatturiero
+[h3] Controllo qualità che non dimentica nulla
+[p] La nostra base storica: dashboard di produzione, automazione e controllo qualità per la fabbrica. Traccia, il nostro sistema di controllo qualità, fotografa i difetti da tablet e ne conserva lo storico ad ogni controllo.
+[span] Traccia
+[span] Controllo qualità
+[span] Traccia
+[div] Ultimo controllo: 2 difetti rilevati
+[div] 12/03 · Graffio, bordo destro
+[span] Business & Ristorazione
+[h3] Il tuo locale, digitalizzato in un unico pannello
+[p] Applichiamo la stessa tecnologia a settori diversi dalla fabbrica. Tavolo è il nostro sistema di gestione per la ristorazione: menu digitale, prenotazioni, turni e costi, tutto in un unico posto. Non sostituisce la cassa, la affianca.
+[span] Tavolo
+[span] Sistema per ristoranti
+[a] Scopri Tavolo
+[span] Tavolo
+[span] Menu del giorno
+[span] Tagliatelle al tartufo
+[span] Risotto ai funghi
+[span] Tiramisu della casa
+[div] Prenota un tavolo
+[p] Hai un processo simile da automatizzare?
+[a] Parliamone
+[span] Il problema
+[h2] Le sfide che frenano la tua crescita
+[h3] Dati fermi
+[p] I dati operativi che restano in silos non creano valore per il business.
+[h3] Processi manuali
+[p] Ogni attività manuale ripetitiva è un'opportunità di efficienza non colta.
+[h3] Gap decisionale
+[p] La distanza tra fabbrica e decisioni aziendali ha un costo nascosto.
+[span] Cosa facciamo
+[h2] Soluzioni su misura, potenziate dall'AI
+[span] Efficienza produzione
+[span] +24%
+[span] Trasforma i dati in decisioni
+[h3] Business Intelligence
+[p] Creiamo dashboard interattive e sistemi di reportistica che ti permettono di avere una visione completa del tuo business in tempo reale.
+[li] Dashboard operative in tempo reale
+[li] KPI di produzione e qualità
+[li] Reportistica per la direzione
+[li] Integrazione con ERP e MES
+[a] Scopri di più
+[span] Elimina le inefficienze
+[h3] Automazione Processi
+[p] Automatizziamo i processi ripetitivi per liberare tempo prezioso e ridurre gli errori, aumentando la produttività del tuo team.
+[li] Eliminazione attività manuali ripetitive
+[li] Flussi di approvazione automatizzati
+[li] Raccolta dati da linea di produzione
+[li] Notifiche e alert intelligenti
+[a] Scopri di più
+[span] Siete aperti sabato?
+[span] Certo! Prenoto per te ✓
+[span] AI applicata, non teoria
+[h3] Intelligenza Artificiale
+[p] Progettiamo assistenti virtuali e modelli predittivi che lavorano al fianco del tuo team, dalla reception al controllo qualità.
+[li] Chatbot e assistenti virtuali 24/7
+[li] Automazione conversazionale su chat e telefono
+[li] Modelli predittivi su dati di produzione
+[li] Integrazione AI nei processi esistenti
+[a] Scopri di più
+[span] Come lavoriamo
+[h2] Il nostro processo
+[h3] Analisi
+[p] Mappiamo insieme i processi e le priorità.
+[h3] Proposta
+[p] ROI definito prima di iniziare.
+[h3] Implementazione
+[p] Costruiamo con il team interno.
+[h3] Presidio
+[p] Misuriamo i risultati nel tempo.
+[span] I nostri principi
+[h2] Perché sceglierci
+[h3] AI applicata, non teoria
+[p] Conosciamo a fondo le logiche di fabbrica e costruiamo la nostra AI a partire da lì. Lo stesso motore che ottimizza le linee di produzione lo applichiamo a reception, prenotazioni e servizio clienti.
+[h3] Risultati misurabili
+[p] Ogni progetto parte da metriche concrete. Definiamo il valore atteso prima di scrivere una riga di codice.
+[h3] Crescita condivisa
+[p] Lavoriamo fianco a fianco con il tuo team. Ogni soluzione nasce insieme a chi la userà ogni giorno.
+[span] Contattaci
+[h2] Parliamo del tuo processo
+[p] Raccontaci la tua sfida. Ti aiuteremo a trasformare i tuoi processi in opportunità di crescita.
+[p] Scrivici direttamente
+[a] info@lrc-solutions.com
+[label] Nome
+[label] Email
+[label] Azienda
+[label] Messaggio
+[button] Invia messaggio
+[span] LRC IT Solutions
+[p] LRC IT Solutions. Tutti i diritti riservati.
+[a] info@lrc-solutions.com
+[span] Agustin Francisco Larici
+[span] P.IVA IT02876010410
