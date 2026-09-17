@@ -190,11 +190,11 @@
     }
   </style>
 
-  <div id="root" data-composition-id="03-la-priorita">
-    <div class="lp3-bg clip" data-start="0" data-duration="5" data-track-index="0"></div>
+  <div id="root" data-composition-id="03-la-priorita" data-width="1920" data-height="1080">
+    <div id="lp3-bg" class="lp3-bg clip" data-start="0" data-duration="5" data-track-index="0"></div>
 
     <div class="lp3-stage">
-      <div class="lp3-rings clip" data-start="0" data-duration="5" data-track-index="1">
+      <div id="lp3-rings" class="lp3-rings clip" data-start="0" data-duration="5" data-track-index="1">
         <div class="lp3-ring"></div>
         <div class="lp3-ring lp3-ring--mid"></div>
         <div class="lp3-ring lp3-ring--in"></div>
@@ -202,7 +202,7 @@
 
       <!-- Scene 1: Frame 2's dashboard photo (no real asset carried into this frame — a
            CSS-built stand-in) clears the stage: shrink + fade toward center. -->
-      <div class="lp3-dash-layer clip" data-start="0" data-duration="1.2" data-track-index="2">
+      <div id="lp3-dash-layer" class="lp3-dash-layer clip" data-start="0" data-duration="1.2" data-track-index="2">
         <div class="lp3-dash-card" id="lp3-dash">
           <div class="lp3-dash-head">
             <div class="lp3-dash-dot"></div>
@@ -228,7 +228,7 @@
       </div>
 
       <!-- Scenes 2 & 3: the tagline lands word-by-word, then the wordmark completes the lockup. -->
-      <div class="lp3-lockup-layer clip" data-start="1.2" data-duration="3.8" data-track-index="3">
+      <div id="lp3-lockup-layer" class="lp3-lockup-layer clip" data-start="1.2" data-duration="3.8" data-track-index="3">
         <div class="lp3-line lp3-line1" id="lp3-line1">
           <span class="lp3-word">Il</span> <span class="lp3-word">tuo</span>
           <span class="lp3-word">processo.</span>
@@ -239,7 +239,7 @@
         </div>
         <div class="lp3-brand" id="lp3-brand">
           <div class="lp3-accent-line" id="lp3-accent"></div>
-          <div class="lp3-wordmark">LRC Solutions</div>
+          <div class="lp3-wordmark">LRC IT Solutions</div>
         </div>
       </div>
     </div>

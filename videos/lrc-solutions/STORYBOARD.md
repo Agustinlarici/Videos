@@ -44,7 +44,7 @@ Scene 2 (2.2–5.0s): "Dati fermi." clears (quick fade) as "Processi manuali." h
 - scene: The industrial texture resolves into the real BI dashboard photo; the site's own solution line lands as it settles
 - duration: 5s
 - transition_in: zoom-through
-- status: outline
+- status: animated
 - src: compositions/frames/02-la-lettura.html
 - type: product_intro
 - persuasion: Negative contrast
@@ -80,10 +80,10 @@ Scene 3 (3.2–5.0s): the dashboard photo settles full-bleed as the focal image 
 - roles: (none — dashboard photo from Frame 2 clears at Scene 1, no asset carried into this frame)
 
 narrativeRole: The closing brand hold — deliberately swaps the "+24%" stat the user declined for the site's own headline claim as the resolve target.
-keyMessage: "Il tuo processo. La nostra priorità." over the wordmark "LRC Solutions" — no stat, no CTA; a calm, confident close for a muted website-embed placement.
+keyMessage: "Il tuo processo. La nostra priorità." over the wordmark "LRC IT Solutions" — no stat, no CTA; a calm, confident close for a muted website-embed placement.
 
 Adapt: keep the signature move (the stage clears, then the lockup builds into being) but there is no icon/mark asset to stroke-draw — only a wordmark — so the tagline text itself is the material that assembles, and the wordmark completes the lockup beneath it.
 
 Scene 1 (0.0–1.2s): Frame 2's dashboard photo clears the stage — shrinks + fades toward center (the exit half of a `scale-swap-transition`) onto frame.md's empty cream canvas, per the Brand_Outro "stage clears" beat.
 Scene 2 (1.2–3.2s): on the cleared canvas, "Il tuo processo." lands first (near-black `h1`, centered, `Closing/CTA` treatment) via a per-word staggered reveal; "La nostra priorità." reveals beneath it a beat later in cobalt (`blockquote`/`h2` ramp) — the tagline is the raw material the lockup assembles from.
-Scene 3 (3.2–5.0s): the wordmark "LRC Solutions" settles beneath the tagline via a whole-word spring-pop entrance (`spring-pop-entrance`, smooth `power3`, no overshoot), completing the lockup. Holds dead-static for this final beat — the video's one deliberate long hold; at most subtle jitter (`sine-wave-loop`, low amplitude).
+Scene 3 (3.2–5.0s): the wordmark "LRC IT Solutions" settles beneath the tagline via a whole-word spring-pop entrance (`spring-pop-entrance`, smooth `power3`, no overshoot), completing the lockup. Holds dead-static for this final beat — the video's one deliberate long hold; at most subtle jitter (`sine-wave-loop`, low amplitude).
